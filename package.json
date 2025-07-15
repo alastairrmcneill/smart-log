@@ -1,5 +1,5 @@
 {
-  "name": "multi-console-log",
+  "name": "smart-log",
   "displayName": "Smart Log",
   "description": "Automating the process of writing meaningful log messages for JavaScript, TypeScript, Dart, and Swift.",
   "version": "1.0.0",
@@ -196,7 +196,7 @@
     "esbuild-watch": "npm run esbuild-base -- --sourcemap --watch",
     "watch": "npm run esbuild --watch",
     "lint": "tsc --noEmit && eslint src --ext ts",
-    "pretest": "yarn run esbuild-base",
+    "pretest": "npm run esbuild-base",
     "test:compile": "rm -rf out && tsc -p ./ && mkdir out/mocha-tests/files && cp -r src/mocha-tests/files/ out/mocha-tests/files/",
     "test": "npm run test:compile && npm run test:jest && node ./out/mocha-tests/runTests.js",
     "test:jest": "jest --config jest.config.ts"
@@ -226,7 +226,7 @@
     "typescript-eslint": "^8.32.1",
     "vscode-test": "^1.6.1"
   },
-  "license": "SEE LICENSE IN LICENSE.txt",
+  "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
     "url": "https://github.com/alastairrmcneill/smart-log/issues",
     "email": "alastair.r.mcneill@gmail.com"

@@ -75,7 +75,7 @@ describe.only('activate - command registration', () => {
 
     activate(fakeContext);
 
-    expect(registerCommandMock).toHaveBeenCalledTimes(2);
+    expect(registerCommandMock).toHaveBeenCalledTimes(5);
   });
 
   it('Invoke showing the release webview with correct versions', () => {

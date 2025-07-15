@@ -223,16 +223,6 @@ function UserComponent({ userId }: { userId: string }) {
 
 ---
 
-## 🆚 Comparison with Original Smart Log Log
-
-| Feature                    | Original | Smart Log Log |
-| -------------------------- | -------- | ------------- |
-| JavaScript/TypeScript      | ✅       | ✅            |
-| Dart Support               | ❌       | ✅            |
-| Swift Support              | ❌       | ✅            |
-| Auto Language Detection    | ❌       | ✅            |
-| Cross-Platform Development | ❌       | ✅            |
-
 ---
 
 ## 🤝 Contributing
@@ -248,7 +238,7 @@ We welcome contributions! Whether you're:
 
 ## 📄 License
 
-See LICENSE.txt file for details.
+See LICENSE.md file for details.
 
 ---
 

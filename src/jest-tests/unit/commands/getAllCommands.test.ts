@@ -47,7 +47,6 @@ describe('getAllCommands', () => {
       'smartLog.uncommentAllLogMessages',
       'smartLog.deleteAllLogMessages',
       'smartLog.correctAllLogMessages',
-      'smartLog.activatePro',
     ];
 
     expect(Array.isArray(commands)).toBe(true);
