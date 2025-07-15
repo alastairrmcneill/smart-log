@@ -17,19 +17,15 @@ import {
 
 function getDebugMessageForLanguage(languageId: string) {
   const language = detectLanguage(languageId);
-  console.log('🎯 EXTENSION: Detected language for file:', language);
 
   switch (language) {
     case ProgrammingLanguage.DART:
-      console.log('🎯 EXTENSION: Using Dart debug message');
       return dartDebugMessage;
     case ProgrammingLanguage.SWIFT:
-      console.log('🎯 EXTENSION: Using Swift debug message');
       return swiftDebugMessage;
     case ProgrammingLanguage.JAVASCRIPT:
     case ProgrammingLanguage.TYPESCRIPT:
     default:
-      console.log('🎯 EXTENSION: Using JS debug message (default)');
       return jsDebugMessage;
   }
 }
@@ -49,13 +45,6 @@ export async function activate(
       const editor = vscode.window.activeTextEditor;
       const languageId = editor?.document.languageId || 'javascript';
       const debugMessage = getDebugMessageForLanguage(languageId);
-
-      console.log(
-        '🎯 EXTENSION: Command',
-        name,
-        'called for language:',
-        languageId,
-      );
 
       handler({
         extensionProperties,

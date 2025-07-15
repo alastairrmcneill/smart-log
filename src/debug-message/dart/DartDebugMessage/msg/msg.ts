@@ -15,12 +15,6 @@ function constructDebuggingMsg(
   spacesBeforeMsg: string,
   language: ProgrammingLanguage,
 ): string {
-  console.log('🎯 constructDebuggingMsg called with:');
-  console.log('🎯 - debuggingMsgContent:', JSON.stringify(debuggingMsgContent));
-  console.log('🎯 - spacesBeforeMsg:', JSON.stringify(spacesBeforeMsg));
-  console.log('🎯 - wrapLogMessage:', extensionProperties.wrapLogMessage);
-  console.log('🎯 - language:', language);
-
   const logFunction = getLogFunction(language);
   const wrappingMsg = `${logFunction}(${extensionProperties.quote}${
     extensionProperties.logMessagePrefix
@@ -32,8 +26,6 @@ function constructDebuggingMsg(
   const debuggingMsg: string = extensionProperties.wrapLogMessage
     ? `${spacesBeforeMsg}${wrappingMsg}\n${spacesBeforeMsg}${debuggingMsgContent}\n${spacesBeforeMsg}${wrappingMsg}`
     : `${spacesBeforeMsg}${debuggingMsgContent}`;
-
-  console.log('🎯 constructDebuggingMsg result:', JSON.stringify(debuggingMsg));
 
   return debuggingMsg;
 }
@@ -52,23 +44,7 @@ function baseDebuggingMsg(
     lineOfLogMsg === document.lineCount ? '\n' : ''
   }${debuggingMsg}\n${insertEmptyLineAfterLogMessage ? '\n' : ''}`;
 
-  console.log('🎯 baseDebuggingMsg called with:');
-  console.log('🎯 - lineOfLogMsg:', lineOfLogMsg);
-  console.log('🎯 - finalPosition:', finalPosition);
-  console.log('🎯 - debuggingMsg:', JSON.stringify(debuggingMsg));
-  console.log('🎯 - textToInsert:', JSON.stringify(textToInsert));
-  console.log(
-    '🎯 - insertEmptyLineBeforeLogMessage:',
-    insertEmptyLineBeforeLogMessage,
-  );
-  console.log(
-    '🎯 - insertEmptyLineAfterLogMessage:',
-    insertEmptyLineAfterLogMessage,
-  );
-
   textEditor.insert(new Position(finalPosition, 0), textToInsert);
-
-  console.log('🎯 textEditor.insert completed');
 }
 
 function debuggingMsgQuote(settingQuote: string, selectedVar: string): string {
@@ -133,13 +109,6 @@ function constructDebuggingMsgContent(
   const semicolon: string = extensionProperties.addSemicolonInTheEnd ? ';' : '';
   const quoteToUse: string = debuggingMsgQuote(quote, selectedVar);
   const logFunction = getLogFunction(language);
-
-  // Debug logging to understand what's happening
-  console.log('🎯 Language detected:', language);
-  console.log('🎯 selectedVar:', selectedVar);
-  console.log('🎯 logFunction:', logFunction);
-  console.log('🎯 quoteToUse:', quoteToUse);
-  console.log('🎯 logMessageSuffix:', logMessageSuffix);
 
   // For Dart, use string interpolation syntax and always add semicolon
   if (language === ProgrammingLanguage.DART) {
@@ -211,19 +180,12 @@ export function msg(
   extensionProperties: ExtensionProperties,
   lineCodeProcessing: LineCodeProcessing,
 ): void {
-  console.log('🎯 DART MSG FUNCTION CALLED');
-  console.log('🎯 Document language ID:', document.languageId);
-  console.log('🎯 Selected variable:', selectedVar);
-
   const language = detectLanguage(document.languageId);
-  console.log('🎯 Detected language:', language);
-  console.log('🎯 Is Dart?', language === ProgrammingLanguage.DART);
 
   // For simplicity, use basic line placement for Dart
   const lineOfLogMsg = lineOfSelectedVar + 1;
   const spacesBeforeMsg = spacesBeforeLine(document, lineOfSelectedVar);
 
-  console.log('🎯 About to call constructDebuggingMsgContent...');
   const debuggingMsgContent = constructDebuggingMsgContent(
     document,
     selectedVar,
@@ -250,18 +212,12 @@ export function msg(
     language,
   );
 
-  console.log('🎯 Generated message content:', debuggingMsgContent);
-
   const debuggingMsg = constructDebuggingMsg(
     extensionProperties,
     debuggingMsgContent,
     spacesBeforeMsg,
     language,
   );
-
-  console.log('🎯 Final debugging message to insert:', debuggingMsg);
-  console.log('🎯 Insert at line:', lineOfLogMsg);
-  console.log('🎯 Spaces before message:', JSON.stringify(spacesBeforeMsg));
 
   baseDebuggingMsg(
     document,
@@ -271,6 +227,4 @@ export function msg(
     extensionProperties.insertEmptyLineBeforeLogMessage,
     extensionProperties.insertEmptyLineAfterLogMessage,
   );
-
-  console.log('🎯 baseDebuggingMsg completed');
 }

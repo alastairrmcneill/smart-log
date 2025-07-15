@@ -15,12 +15,6 @@ function constructDebuggingMsg(
   spacesBeforeMsg: string,
   language: ProgrammingLanguage,
 ): string {
-  console.log('🎯 Swift constructDebuggingMsg called with:');
-  console.log('🎯 - debuggingMsgContent:', JSON.stringify(debuggingMsgContent));
-  console.log('🎯 - spacesBeforeMsg:', JSON.stringify(spacesBeforeMsg));
-  console.log('🎯 - wrapLogMessage:', extensionProperties.wrapLogMessage);
-  console.log('🎯 - language:', language);
-
   const logFunction = getLogFunction(language);
   const wrappingMsg = `${logFunction}(${extensionProperties.quote}${
     extensionProperties.logMessagePrefix
@@ -30,11 +24,6 @@ function constructDebuggingMsg(
   const debuggingMsg: string = extensionProperties.wrapLogMessage
     ? `${spacesBeforeMsg}${wrappingMsg}\n${spacesBeforeMsg}${debuggingMsgContent}\n${spacesBeforeMsg}${wrappingMsg}`
     : `${spacesBeforeMsg}${debuggingMsgContent}`;
-
-  console.log(
-    '🎯 Swift constructDebuggingMsg result:',
-    JSON.stringify(debuggingMsg),
-  );
 
   return debuggingMsg;
 }
@@ -53,15 +42,7 @@ function baseDebuggingMsg(
     lineOfLogMsg === document.lineCount ? '\n' : ''
   }${debuggingMsg}\n${insertEmptyLineAfterLogMessage ? '\n' : ''}`;
 
-  console.log('🎯 Swift baseDebuggingMsg called with:');
-  console.log('🎯 - lineOfLogMsg:', lineOfLogMsg);
-  console.log('🎯 - finalPosition:', finalPosition);
-  console.log('🎯 - debuggingMsg:', JSON.stringify(debuggingMsg));
-  console.log('🎯 - textToInsert:', JSON.stringify(textToInsert));
-
   textEditor.insert(new Position(finalPosition, 0), textToInsert);
-
-  console.log('🎯 Swift textEditor.insert completed');
 }
 
 function debuggingMsgQuote(settingQuote: string, selectedVar: string): string {
@@ -126,12 +107,6 @@ function constructDebuggingMsgContent(
   const quoteToUse: string = debuggingMsgQuote(quote, selectedVar);
   const logFunction = getLogFunction(language);
 
-  console.log('🎯 Swift Language detected:', language);
-  console.log('🎯 Swift selectedVar:', selectedVar);
-  console.log('🎯 Swift logFunction:', logFunction);
-  console.log('🎯 Swift quoteToUse:', quoteToUse);
-  console.log('🎯 Swift logMessageSuffix:', logMessageSuffix);
-
   // For Swift, use string interpolation syntax \\(variable) and no semicolons
   if (language === ProgrammingLanguage.SWIFT) {
     return `${logFunction}(${quoteToUse}${logMessagePrefix}${
@@ -176,19 +151,12 @@ export function msg(
   extensionProperties: ExtensionProperties,
   lineCodeProcessing: LineCodeProcessing,
 ): void {
-  console.log('🎯 SWIFT MSG FUNCTION CALLED');
-  console.log('🎯 Swift Document language ID:', document.languageId);
-  console.log('🎯 Swift Selected variable:', selectedVar);
-
   const language = detectLanguage(document.languageId);
-  console.log('🎯 Swift Detected language:', language);
-  console.log('🎯 Swift Is Swift?', language === ProgrammingLanguage.SWIFT);
 
   // For simplicity, use basic line placement for Swift
   const lineOfLogMsg = lineOfSelectedVar + 1;
   const spacesBeforeMsg = spacesBeforeLine(document, lineOfSelectedVar);
 
-  console.log('🎯 Swift About to call constructDebuggingMsgContent...');
   const debuggingMsgContent = constructDebuggingMsgContent(
     document,
     selectedVar,
@@ -215,20 +183,11 @@ export function msg(
     language,
   );
 
-  console.log('🎯 Swift Generated message content:', debuggingMsgContent);
-
   const debuggingMsg = constructDebuggingMsg(
     extensionProperties,
     debuggingMsgContent,
     spacesBeforeMsg,
     language,
-  );
-
-  console.log('🎯 Swift Final debugging message to insert:', debuggingMsg);
-  console.log('🎯 Swift Insert at line:', lineOfLogMsg);
-  console.log(
-    '🎯 Swift Spaces before message:',
-    JSON.stringify(spacesBeforeMsg),
   );
 
   baseDebuggingMsg(
@@ -239,6 +198,4 @@ export function msg(
     extensionProperties.insertEmptyLineBeforeLogMessage,
     extensionProperties.insertEmptyLineAfterLogMessage,
   );
-
-  console.log('🎯 Swift baseDebuggingMsg completed');
 }
