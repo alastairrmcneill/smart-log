@@ -144,7 +144,7 @@ export function getHtmlWebView(): string {
     <body>
         <div class="container">
             <div class="header">
-                <h1>🚀 Smart Log</h1>
+                <h1>📱 Smart Log</h1>
                 <div class="subtitle">Multi-Language Console Logging for Modern Development</div>
             </div>
             
@@ -362,7 +362,7 @@ function UserComponent({ userId }: { userId: string }) {
                 </div>
 
                 <div class="section">
-                    <h2><span class="emoji">🚀</span>Getting Started</h2>
+                    <h2><span class="emoji">📱</span>Getting Started</h2>
                     <ol>
                         <li><strong>Select a variable</strong> in any supported file (.js, .ts, .dart, .swift)</li>
                         <li><strong>Press <span class="keybinding">Ctrl+Alt+L</span></strong></li>

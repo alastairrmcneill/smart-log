@@ -31,7 +31,7 @@ export function typedFunctionCallLine(
 
     currentLineNum++;
 
-    // 🚀 Stop scanning when parentheses balance out
+    // 📱 Stop scanning when parentheses balance out
     if (
       totalOpenedParentheses > 0 &&
       totalOpenedParentheses === totalClosedParentheses

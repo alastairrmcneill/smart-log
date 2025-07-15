@@ -31,7 +31,7 @@ describe('Named function LOC', () => {
   it('Should return true when LOC contains named function declaration', () => {
     namedFunctionsLOCs.forEach((namedFunctionLOC) => {
       // console.log(
-      //   '🚀 ~ named-function-declaration.test.ts ~ namedFunctionLOC:',
+      //   '📱 ~ named-function-declaration.test.ts ~ namedFunctionLOC:',
       //   namedFunctionLOC,
       // );
       expect(

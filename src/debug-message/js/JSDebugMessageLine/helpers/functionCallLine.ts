@@ -46,7 +46,7 @@ export function functionCallLine(
   while (currentLineNum < document.lineCount) {
     currentLineText = document.lineAt(currentLineNum).text;
 
-    // 🚀 Improved: Count ALL occurrences of '{', '}', '(', and ')'
+    // 📱 Improved: Count ALL occurrences of '{', '}', '(', and ')'
     totalOpenedBrackets += (currentLineText.match(/{/g) || []).length;
     totalClosedBrackets += (currentLineText.match(/}/g) || []).length;
     totalOpenedParentheses += (currentLineText.match(/\(/g) || []).length;
@@ -61,7 +61,7 @@ export function functionCallLine(
 
     currentLineNum++;
 
-    // 🚀 Stop scanning when we close all brackets, parentheses, and backticks
+    // 📱 Stop scanning when we close all brackets, parentheses, and backticks
     if (
       totalOpenedBrackets === totalClosedBrackets &&
       totalOpenedParentheses === totalClosedParentheses &&

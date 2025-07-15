@@ -1,4 +1,4 @@
-# Smart Log Log 🚀
+# Smart Log Log 📱
 
 **Automating the process of writing meaningful log messages for JavaScript, TypeScript, Dart, and Swift.**
 
@@ -12,14 +12,14 @@ Smart Log Log is a **developer's best friend** for debugging across multiple pro
 
 ---
 
-## 🚀 Multi-Language Support
+## 📱 Multi-Language Support
 
 ### 📱 Flutter/Dart Development
 
 ```dart
 var username = 'john_doe';
 // Select 'username' and press Ctrl+Alt+L
-print("🚀 ~ username: $username");
+print("📱 ~ username: $username");
 ```
 
 ### 🍎 iOS/Swift Development
@@ -27,7 +27,7 @@ print("🚀 ~ username: $username");
 ```swift
 let username = "john_doe"
 // Select 'username' and press Ctrl+Alt+L
-print("🚀 ~ username: \(username)")
+print("📱 ~ username: \(username)")
 ```
 
 ### 🌐 Web Development (JavaScript/TypeScript)
@@ -35,7 +35,7 @@ print("🚀 ~ username: \(username)")
 ```javascript
 const username = 'john_doe';
 // Select 'username' and press Ctrl+Alt+L
-console.log('🚀 ~ username:', username);
+console.log('📱 ~ username:', username);
 ```
 
 ---
@@ -70,12 +70,12 @@ console.log('🚀 ~ username:', username);
 ```dart
 // Working with variables
 var user = {'name': 'John', 'age': 30};
-print("🚀 ~ user: $user");
+print("📱 ~ user: $user");
 
 // In functions with context
 int calculateSum(int a, int b) {
     var result = a + b;
-    print("🚀 ~ calculateSum ~ result: $result");
+    print("📱 ~ calculateSum ~ result: $result");
     return result;
 }
 
@@ -83,7 +83,7 @@ int calculateSum(int a, int b) {
 class UserService {
     void createUser(String name) {
         var userId = generateId();
-        print("🚀 ~ UserService ~ createUser ~ userId: $userId");
+        print("📱 ~ UserService ~ createUser ~ userId: $userId");
     }
 }
 ```
@@ -93,12 +93,12 @@ class UserService {
 ```swift
 // Working with variables
 let user = ["name": "John", "age": 30]
-print("🚀 ~ user: \(user)")
+print("📱 ~ user: \(user)")
 
 // In functions with context
 func calculateSum(a: Int, b: Int) -> Int {
     let result = a + b
-    print("🚀 ~ calculateSum ~ result: \(result)")
+    print("📱 ~ calculateSum ~ result: \(result)")
     return result
 }
 
@@ -106,7 +106,7 @@ func calculateSum(a: Int, b: Int) -> Int {
 struct UserService {
     func createUser(name: String) {
         let userId = generateId()
-        print("🚀 ~ UserService ~ createUser ~ userId: \(userId)")
+        print("📱 ~ UserService ~ createUser ~ userId: \(userId)")
     }
 }
 ```
@@ -116,12 +116,12 @@ struct UserService {
 ```javascript
 // Working with variables
 const user = { name: 'John', age: 30 };
-console.log('🚀 ~ user:', user);
+console.log('📱 ~ user:', user);
 
 // In functions with context
 function calculateSum(a, b) {
   const result = a + b;
-  console.log('🚀 ~ calculateSum ~ result:', result);
+  console.log('📱 ~ calculateSum ~ result:', result);
   return result;
 }
 
@@ -129,7 +129,7 @@ function calculateSum(a, b) {
 class UserService {
   createUser(name) {
     const userId = this.generateId();
-    console.log('🚀 ~ UserService ~ createUser ~ userId:', userId);
+    console.log('📱 ~ UserService ~ createUser ~ userId:', userId);
   }
 }
 ```
@@ -148,7 +148,7 @@ The extension automatically detects your file type and uses the appropriate logg
 
 | Setting                            | Description                       | Default |
 | ---------------------------------- | --------------------------------- | ------- |
-| `smartLog.logMessagePrefix`        | Prefix for log messages           | `🚀`    |
+| `smartLog.logMessagePrefix`        | Prefix for log messages           | `📱`    |
 | `smartLog.logMessageSuffix`        | Suffix for log messages           | `:`     |
 | `smartLog.includeFilename`         | Include filename in logs          | `false` |
 | `smartLog.includeLineNum`          | Include line numbers              | `false` |
@@ -180,7 +180,7 @@ class MyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
-    print("🚀 ~ MyWidget ~ build ~ theme: $theme");
+    print("📱 ~ MyWidget ~ build ~ theme: $theme");
 
     return Scaffold(
       body: Center(
@@ -199,7 +199,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let userDefaults = UserDefaults.standard
-        print("🚀 ~ ViewController ~ viewDidLoad ~ userDefaults: \(userDefaults)")
+        print("📱 ~ ViewController ~ viewDidLoad ~ userDefaults: \(userDefaults)")
     }
 }
 ```
@@ -215,7 +215,7 @@ interface User {
 
 function UserComponent({ userId }: { userId: string }) {
   const user = fetchUser(userId);
-  console.log("🚀 ~ UserComponent ~ user:", user);
+  console.log("📱 ~ UserComponent ~ user:", user);
 
   return <div>{user.name}</div>;
 }
@@ -242,6 +242,6 @@ See LICENSE.md file for details.
 
 ---
 
-**Enjoy productive debugging across JavaScript, TypeScript, Dart, and Swift! 🚀**
+**Enjoy productive debugging across JavaScript, TypeScript, Dart, and Swift! 📱**
 
 _Perfect for full-stack developers, mobile developers, and teams working across multiple platforms._

@@ -5,7 +5,7 @@ export function getExtensionProperties(
 ) {
   return {
     wrapLogMessage: workspaceConfig.wrapLogMessage || false,
-    logMessagePrefix: workspaceConfig.logMessagePrefix || '🚀',
+    logMessagePrefix: workspaceConfig.logMessagePrefix || '📱',
     logMessageSuffix: workspaceConfig.logMessageSuffix || ':',
     addSemicolonInTheEnd: workspaceConfig.addSemicolonInTheEnd || false,
     insertEnclosingClass: workspaceConfig.insertEnclosingClass || true,

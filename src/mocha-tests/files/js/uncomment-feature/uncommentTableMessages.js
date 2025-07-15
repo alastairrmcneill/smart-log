@@ -7,15 +7,15 @@ const person = {
   },
 };
 
-// console.table('🚀 ~ uncommentTableMessages.js:10 ~ person:', person);
+// console.table('📱 ~ uncommentTableMessages.js:10 ~ person:', person);
 
 const isMarried = true;
 
-// console.table('🚀 ~ uncommentTableMessages.js:14 ~ isMarried:', isMarried);
+// console.table('📱 ~ uncommentTableMessages.js:14 ~ isMarried:', isMarried);
 
 function sayHello(person) {
   // console.table(
-  //  '🚀 ~ uncommentTableMessages.js:17 ~ sayHello ~ person:',
+  //  '📱 ~ uncommentTableMessages.js:17 ~ sayHello ~ person:',
   //  person,
   // );
   console.debug(`Hello ${person.fullName}`);

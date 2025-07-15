@@ -7,13 +7,13 @@ const person = {
   },
 };
 
-console.warn('🚀 ~ commentWarnMessages.js:10 ~ person:', person);
+console.warn('📱 ~ commentWarnMessages.js:10 ~ person:', person);
 
 const isMarried = true;
 
-console.warn('🚀 ~ commentWarnMessages.js:14 ~ isMarried:', isMarried);
+console.warn('📱 ~ commentWarnMessages.js:14 ~ isMarried:', isMarried);
 
 function sayHello(person) {
-  console.warn('🚀 ~ commentWarnMessages.js:17 ~ sayHello ~ person:', person);
+  console.warn('📱 ~ commentWarnMessages.js:17 ~ sayHello ~ person:', person);
   console.debug(`Hello ${person.fullName}`);
 }

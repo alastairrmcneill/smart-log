@@ -51,7 +51,7 @@ describe('showReleaseHtmlWebViewAndNotification', () => {
     showReleaseHtmlWebViewAndNotification(context, '2.16.0', '3.0.0');
 
     expect(openWebViewMock).toHaveBeenCalledWith(
-      `🚀 Welcome To Smart Log Log Family 🎊`,
+      `📱 Welcome To Smart Log Log Family 🎊`,
       '<html>Fresh</html>',
     );
     expect(writeMock).toHaveBeenCalledWith(
@@ -75,7 +75,7 @@ describe('showReleaseHtmlWebViewAndNotification', () => {
     showReleaseHtmlWebViewAndNotification(context, '2.16.0', '3.0.0');
 
     expect(openWebViewMock).toHaveBeenCalledWith(
-      '🚀 Smart Log Log - Release 3.0.0 Notes',
+      '📱 Smart Log Log - Release 3.0.0 Notes',
       releaseHtml,
     );
     expect(writeMock).toHaveBeenCalledWith(
