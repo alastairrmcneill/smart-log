@@ -25,7 +25,7 @@ export default (): void => {
         [],
       );
     });
-    it('Should log the turbo message correctly when it comes to full expression', async () => {
+    it('Should log the smart message correctly when it comes to full expression', async () => {
       const { activeTextEditor } = vscode.window;
       expectActiveTextEditorWithFile(activeTextEditor, 'call.ts');
       if (activeTextEditor) {
@@ -35,10 +35,7 @@ export default (): void => {
             new NaturalEditorPosition(4, 51),
           ),
         ];
-        await vscode.commands.executeCommand(
-          'turboConsoleLog.displayLogMessage',
-          [],
-        );
+        await vscode.commands.executeCommand('smartLog.displayLogMessage', []);
         await Promise.all(
           documentLinesChanged(activeTextEditor.document, [
             naturalEditorLine(5),

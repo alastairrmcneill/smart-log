@@ -31,14 +31,11 @@ export default (): void => {
         'commentTableMessages.js',
       );
       if (activeTextEditor) {
-        await vscode.commands.executeCommand(
-          'turboConsoleLog.commentAllLogMessages',
-          [
-            {
-              logType: 'table',
-            },
-          ],
-        );
+        await vscode.commands.executeCommand('smartLog.commentAllLogMessages', [
+          {
+            logType: 'table',
+          },
+        ]);
         await Promise.all(
           documentLinesChanged(activeTextEditor.document, [
             naturalEditorLine(10),

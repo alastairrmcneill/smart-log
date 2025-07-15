@@ -36,10 +36,7 @@ export default (): void => {
             new vscode.Position(13, 13),
           ),
         ];
-        await vscode.commands.executeCommand(
-          'turboConsoleLog.displayLogMessage',
-          [],
-        );
+        await vscode.commands.executeCommand('smartLog.displayLogMessage', []);
         await Promise.all(
           documentLinesChanged(activeTextEditor.document, [20]),
         );
@@ -52,10 +49,7 @@ export default (): void => {
             new vscode.Position(25, 14),
           ),
         ];
-        await vscode.commands.executeCommand(
-          'turboConsoleLog.displayLogMessage',
-          [],
-        );
+        await vscode.commands.executeCommand('smartLog.displayLogMessage', []);
         await Promise.all(
           documentLinesChanged(activeTextEditor.document, [26]),
         );

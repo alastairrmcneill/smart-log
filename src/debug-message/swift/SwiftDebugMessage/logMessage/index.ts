@@ -1,0 +1,1 @@
+export { logMessage } from './logMessage';

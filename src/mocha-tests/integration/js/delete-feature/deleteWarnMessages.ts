@@ -26,20 +26,14 @@ export default (): void => {
     });
     it('Should delete log messages with the warn as the log type', async () => {
       const { activeTextEditor } = vscode.window;
-      expectActiveTextEditorWithFile(
-        activeTextEditor,
-        'deleteWarnMessages.js',
-      );
+      expectActiveTextEditorWithFile(activeTextEditor, 'deleteWarnMessages.js');
       if (activeTextEditor) {
         const originalLineCount = activeTextEditor.document.lineCount;
-        await vscode.commands.executeCommand(
-          'turboConsoleLog.deleteAllLogMessages',
-          [
-            {
-              logType: 'warn',
-            },
-          ],
-        );
+        await vscode.commands.executeCommand('smartLog.deleteAllLogMessages', [
+          {
+            logType: 'warn',
+          },
+        ]);
         const logMessagesLines = [
           naturalEditorLine(2),
           naturalEditorLine(4),

@@ -25,7 +25,7 @@ export default (): void => {
         [],
       );
     });
-    it('Should insert turbo log inside object property function', async () => {
+    it('Should insert smart log inside object property function', async () => {
       const { activeTextEditor } = vscode.window;
       expectActiveTextEditorWithFile(activeTextEditor, 'objectProperty.ts');
       if (activeTextEditor) {
@@ -35,10 +35,7 @@ export default (): void => {
             new NaturalEditorPosition(9, 31),
           ),
         ];
-        await vscode.commands.executeCommand(
-          'turboConsoleLog.displayLogMessage',
-          [],
-        );
+        await vscode.commands.executeCommand('smartLog.displayLogMessage', []);
         await Promise.all(
           documentLinesChanged(activeTextEditor.document, [
             naturalEditorLine(10),

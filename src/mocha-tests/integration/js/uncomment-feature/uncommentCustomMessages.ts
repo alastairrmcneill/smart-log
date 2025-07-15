@@ -32,18 +32,22 @@ export default (): void => {
       );
       if (activeTextEditor) {
         await vscode.commands.executeCommand(
-          'turboConsoleLog.uncommentAllLogMessages',
-          [{
-            logFunction: 'fancy.debug.func',
-          }],
+          'smartLog.uncommentAllLogMessages',
+          [
+            {
+              logFunction: 'fancy.debug.func',
+            },
+          ],
         );
         const logMessagesLines = [
-            naturalEditorLine(10),
-            naturalEditorLine(14),
-            naturalEditorLine(17),
-        ]
+          naturalEditorLine(10),
+          naturalEditorLine(14),
+          naturalEditorLine(17),
+        ];
         await Promise.all(
-          documentLinesChanged(activeTextEditor.document, [...logMessagesLines]),
+          documentLinesChanged(activeTextEditor.document, [
+            ...logMessagesLines,
+          ]),
         );
         const textDocument = activeTextEditor.document;
         for (const logMessageLine of logMessagesLines) {

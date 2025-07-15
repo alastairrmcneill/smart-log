@@ -15,7 +15,7 @@ function getFilenameFromLogMessage(
 
 export function correctAllLogMessagesCommand(): Command {
   return {
-    name: 'turboConsoleLog.correctAllLogMessages',
+    name: 'smartLog.correctAllLogMessages',
     handler: async ({ extensionProperties, debugMessage, args }) => {
       const editor: vscode.TextEditor | undefined =
         vscode.window.activeTextEditor;

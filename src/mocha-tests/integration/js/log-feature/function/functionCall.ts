@@ -35,10 +35,7 @@ export default (): void => {
             new NaturalEditorPosition(2, 16),
           ),
         ];
-        await vscode.commands.executeCommand(
-          'turboConsoleLog.displayLogMessage',
-          [],
-        );
+        await vscode.commands.executeCommand('smartLog.displayLogMessage', []);
         await Promise.all(
           documentLinesChanged(activeTextEditor.document, [
             naturalEditorLine(5),
@@ -59,10 +56,7 @@ export default (): void => {
             new NaturalEditorPosition(6, 17),
           ),
         ];
-        await vscode.commands.executeCommand(
-          'turboConsoleLog.displayLogMessage',
-          [],
-        );
+        await vscode.commands.executeCommand('smartLog.displayLogMessage', []);
         await Promise.all(
           documentLinesChanged(activeTextEditor.document, [
             naturalEditorLine(16),
@@ -73,7 +67,7 @@ export default (): void => {
         expect(/console\.log\(.*/.test(logMessage)).to.equal(true);
       }
     });
-    it('Should insert turbo message in the right location given a chained call context', async () => {
+    it('Should insert smart message in the right location given a chained call context', async () => {
       const { activeTextEditor } = vscode.window;
       expectActiveTextEditorWithFile(activeTextEditor, 'functionCall.ts');
       if (activeTextEditor) {
@@ -83,10 +77,7 @@ export default (): void => {
             new NaturalEditorPosition(18, 14),
           ),
         ];
-        await vscode.commands.executeCommand(
-          'turboConsoleLog.displayLogMessage',
-          [],
-        );
+        await vscode.commands.executeCommand('smartLog.displayLogMessage', []);
         await Promise.all(
           documentLinesChanged(activeTextEditor.document, [
             naturalEditorLine(19),
@@ -97,7 +88,7 @@ export default (): void => {
         expect(/console\.log\(.*/.test(logMessage)).to.equal(true);
       }
     });
-    it('Should compute the right turbo log message line number in the contex of a complex chain. issue-260', async () => {
+    it('Should compute the right smart log message line number in the contex of a complex chain. issue-260', async () => {
       const { activeTextEditor } = vscode.window;
       expectActiveTextEditorWithFile(activeTextEditor, 'functionCall.ts');
       if (activeTextEditor) {
@@ -107,10 +98,7 @@ export default (): void => {
             new NaturalEditorPosition(24, 13),
           ),
         ];
-        await vscode.commands.executeCommand(
-          'turboConsoleLog.displayLogMessage',
-          [],
-        );
+        await vscode.commands.executeCommand('smartLog.displayLogMessage', []);
         await Promise.all(
           documentLinesChanged(activeTextEditor.document, [
             naturalEditorLine(28),

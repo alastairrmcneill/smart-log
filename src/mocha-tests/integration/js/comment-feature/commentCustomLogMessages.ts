@@ -30,14 +30,11 @@ export default (): void => {
         'commentCustomLogMessages.js',
       );
       if (activeTextEditor) {
-        await vscode.commands.executeCommand(
-          'turboConsoleLog.commentAllLogMessages',
-          [
-            {
-              logFunction: 'fancy.debug.func',
-            },
-          ],
-        );
+        await vscode.commands.executeCommand('smartLog.commentAllLogMessages', [
+          {
+            logFunction: 'fancy.debug.func',
+          },
+        ]);
         const textDocument = activeTextEditor.document;
         const logMessagesLines = [9, 13, 16];
         await Promise.all(documentLinesChanged(textDocument, logMessagesLines));

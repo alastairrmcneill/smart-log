@@ -1,9 +1,9 @@
 {
-  "name": "turbo-console-log",
-  "displayName": "Turbo Console Log",
-  "description": "Automating the process of writing meaningful log messages.",
-  "version": "3.2.0",
-  "publisher": "ChakrounAnas",
+  "name": "multi-console-log",
+  "displayName": "Smart Log",
+  "description": "Automating the process of writing meaningful log messages for JavaScript, TypeScript, Dart, and Swift.",
+  "version": "1.0.0",
+  "publisher": "AlastairMcNeill",
   "engines": {
     "vscode": "^1.50.0"
   },
@@ -16,75 +16,77 @@
     "onLanguage:javascript",
     "onLanguage:javascriptreact",
     "onLanguage:typescript",
-    "onLanguage:typescriptreact"
+    "onLanguage:typescriptreact",
+    "onLanguage:dart",
+    "onLanguage:swift"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "configuration": {
       "type": "object",
-      "title": "Turbo Console Log Configuration",
+      "title": "Smart Log Configuration",
       "properties": {
-        "turboConsoleLog.wrapLogMessage": {
+        "smartLog.wrapLogMessage": {
           "type": "boolean",
           "default": false,
           "description": "Determine if the log message should be wrapped or not."
         },
-        "turboConsoleLog.logMessagePrefix": {
+        "smartLog.logMessagePrefix": {
           "type": "string",
-          "default": "🚀",
+          "default": "📱",
           "description": "The prefix of the log message."
         },
-        "turboConsoleLog.logMessageSuffix": {
+        "smartLog.logMessageSuffix": {
           "type": "string",
           "default": ":",
           "description": "The suffix of the log message."
         },
-        "turboConsoleLog.includeFilename": {
+        "smartLog.includeFilename": {
           "type": "boolean",
           "default": false,
           "description": "Whether to include the file name of the log message."
         },
-        "turboConsoleLog.includeLineNum": {
+        "smartLog.includeLineNum": {
           "type": "boolean",
           "default": false,
           "description": "Whether to include the line number of the log message."
         },
-        "turboConsoleLog.addSemicolonInTheEnd": {
+        "smartLog.addSemicolonInTheEnd": {
           "type": "boolean",
           "default": false,
           "description": "Whether to add or not a semicolon in the end of the log message."
         },
-        "turboConsoleLog.insertEnclosingClass": {
+        "smartLog.insertEnclosingClass": {
           "type": "boolean",
           "default": true,
           "description": "Whether to insert or not the enclosing class of the selected variable in the log message."
         },
-        "turboConsoleLog.logCorrectionNotificationEnabled": {
+        "smartLog.logCorrectionNotificationEnabled": {
           "type": "boolean",
           "default": false,
           "description": "Whether to enable or disable the log correction notification."
         },
-        "turboConsoleLog.insertEnclosingFunction": {
+        "smartLog.insertEnclosingFunction": {
           "type": "boolean",
           "default": true,
           "description": "Whether to insert or not the enclosing function of the selected variable in the log message."
         },
-        "turboConsoleLog.insertEmptyLineBeforeLogMessage": {
+        "smartLog.insertEmptyLineBeforeLogMessage": {
           "type": "boolean",
           "default": false,
           "description": "Whether to insert an empty line before the log message or not."
         },
-        "turboConsoleLog.insertEmptyLineAfterLogMessage": {
+        "smartLog.insertEmptyLineAfterLogMessage": {
           "type": "boolean",
           "default": false,
           "description": "Whether to insert an empty line after the log message or not."
         },
-        "turboConsoleLog.delimiterInsideMessage": {
+        "smartLog.delimiterInsideMessage": {
           "type": "string",
           "default": "~",
           "description": "The delimiter that will separate the different log message elements (file name, line number, class, function and variable)"
         },
-        "turboConsoleLog.quote": {
+        "smartLog.quote": {
           "type": "string",
           "enum": [
             "\"",
@@ -94,7 +96,7 @@
           "default": "\"",
           "description": "Double quotes, single quotes or backtick"
         },
-        "turboConsoleLog.logType": {
+        "smartLog.logType": {
           "type": "string",
           "enum": [
             "log",
@@ -106,7 +108,7 @@
           "default": "log",
           "description": "Select the log type"
         },
-        "turboConsoleLog.logFunction": {
+        "smartLog.logFunction": {
           "type": "string",
           "default": "log",
           "description": "Specify a log function (when specified logType will be ignored)"
@@ -115,116 +117,74 @@
     },
     "commands": [
       {
-        "command": "turboConsoleLog.displayLogMessage",
-        "title": "Turbo Console Log: Display Turbo Log Message"
+        "command": "smartLog.displayLogMessage",
+        "title": "Smart Log: Display Smart Log Message"
       },
       {
-        "command": "turboConsoleLog.commentAllLogMessages",
-        "title": "Turbo Console Log: Comment Turbo Log Messages"
+        "command": "smartLog.commentAllLogMessages",
+        "title": "Smart Log: Comment Smart Log Messages"
       },
       {
-        "command": "turboConsoleLog.uncommentAllLogMessages",
-        "title": "Turbo Console Log: Uncomment Turbo Log Messages"
+        "command": "smartLog.uncommentAllLogMessages",
+        "title": "Smart Log: Uncomment Smart Log Messages"
       },
       {
-        "command": "turboConsoleLog.deleteAllLogMessages",
-        "title": "Turbo Console Log: Delete Turbo Log Messages"
+        "command": "smartLog.deleteAllLogMessages",
+        "title": "Smart Log: Delete Smart Log Messages"
       },
       {
-        "command": "turboConsoleLog.correctAllLogMessages",
-        "title": "Turbo Console Log: Correct Turbo Log Messages"
-      },
-      {
-        "command": "turboConsoleLog.activateTurboProBundle",
-        "title": "Turbo Console Log: Activate Turbo Pro Bundle"
+        "command": "smartLog.correctAllLogMessages",
+        "title": "Smart Log: Correct Smart Log Messages"
       }
     ],
     "keybindings": [
       {
-        "command": "turboConsoleLog.displayLogMessage",
+        "command": "smartLog.displayLogMessage",
         "key": "ctrl+alt+l",
         "mac": "ctrl+alt+l"
       },
       {
-        "command": "turboConsoleLog.commentAllLogMessages",
+        "command": "smartLog.commentAllLogMessages",
         "key": "alt+shift+c",
         "mac": "alt+shift+c"
       },
       {
-        "command": "turboConsoleLog.uncommentAllLogMessages",
+        "command": "smartLog.uncommentAllLogMessages",
         "key": "alt+shift+u",
         "mac": "alt+shift+u"
       },
       {
-        "command": "turboConsoleLog.deleteAllLogMessages",
+        "command": "smartLog.deleteAllLogMessages",
         "key": "alt+shift+d",
         "mac": "alt+shift+d"
       },
       {
-        "command": "turboConsoleLog.correctAllLogMessages",
+        "command": "smartLog.correctAllLogMessages",
         "key": "alt+shift+x",
         "mac": "alt+shift+x"
-      },
-      {
-        "command": "turboConsoleLog.activateTurboProBundle",
-        "key": "alt+shift+p",
-        "mac": "alt+shift+p"
       }
     ],
-    "viewsContainers": {
-      "activitybar": [
-        {
-          "id": "turboConsoleLogProPanelContainer",
-          "title": "Turbo Console Log",
-          "icon": "images/icon.png"
-        }
-      ]
-    },
-    "views": {
-      "turboConsoleLogProPanelContainer": [
-        {
-          "id": "turboConsoleLogProView",
-          "name": "PRO Panel",
-          "icon": "images/icon.png",
-          "when": "turboConsoleLog:isInitialized && turboConsoleLog:isPro"
-        },
-        {
-          "id": "turboConsoleLogFreemiumPanel",
-          "name": "Become Pro",
-          "icon": "images/icon.png",
-          "type": "webview",
-          "when": "turboConsoleLog:isInitialized && !turboConsoleLog:isPro && !turboConsoleLog:isRepairMode"
-        },
-        {
-          "id": "turboConsoleLogBundleRepairPanel",
-          "name": "Bundle Repair Mode",
-          "icon": "images/icon.png",
-          "type": "webview",
-          "when": "turboConsoleLog:isInitialized && turboConsoleLog:isRepairMode"
-        }
-      ]
-    },
     "menus": {
       "view/item/context": [
         {
-          "command": "turboConsoleLog.commentAllLogMessages",
+          "command": "smartLog.commentAllLogMessages",
           "when": "viewItem == fileLogsNode",
-          "group": "turbo"
+          "group": "smart"
         },
         {
-          "command": "turboConsoleLog.uncommentAllLogMessages",
+          "command": "smartLog.uncommentAllLogMessages",
           "when": "viewItem == fileLogsNode",
-          "group": "turbo"
+          "group": "smart"
         },
         {
-          "command": "turboConsoleLog.deleteAllLogMessages",
+          "command": "smartLog.deleteAllLogMessages",
           "when": "viewItem == fileLogsNode",
-          "group": "turbo"
+          "group": "smart"
         },
         {
-          "command": "turboConsoleLog.correctAllLogMessages",
+          "command": "smartLog.correctAllLogMessages",
           "when": "viewItem == fileLogsNode",
-          "group": "turbo"
+          "group": "smart"
         }
       ]
     }
@@ -268,18 +228,12 @@
   },
   "license": "SEE LICENSE IN LICENSE.txt",
   "bugs": {
-    "url": "https://github.com/Chakroun-Anas/turbo-console-log/issues",
-    "email": "chakroun.anas@outlook.com"
+    "url": "https://github.com/alastairrmcneill/smart-log/issues",
+    "email": "alastair.r.mcneill@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Chakroun-Anas/turbo-console-log"
-  },
-  "__metadata": {
-    "id": "6623619a-676d-4cde-943f-a3c193b44fc0",
-    "publisherDisplayName": "ChakrounAnas",
-    "publisherId": "4fecec8e-335d-44fc-ab16-5356745fb1ac",
-    "isPreReleaseVersion": false
+    "url": "https://github.com/alastairrmcneill/smart-log"
   },
   "dependencies": {
     "typescript": "^5.8.3",

@@ -32,7 +32,7 @@ export default (): void => {
       );
       if (activeTextEditor) {
         await vscode.commands.executeCommand(
-          'turboConsoleLog.uncommentAllLogMessages',
+          'smartLog.uncommentAllLogMessages',
           [
             {
               logType: 'warn',

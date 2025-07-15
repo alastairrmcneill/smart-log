@@ -32,14 +32,11 @@ export default (): void => {
       );
       if (activeTextEditor) {
         const originalLineCount = activeTextEditor.document.lineCount;
-        await vscode.commands.executeCommand(
-          'turboConsoleLog.deleteAllLogMessages',
-          [
-            {
-              logType: 'error',
-            },
-          ],
-        );
+        await vscode.commands.executeCommand('smartLog.deleteAllLogMessages', [
+          {
+            logType: 'error',
+          },
+        ]);
         const logMessagesLines = [
           naturalEditorLine(2),
           naturalEditorLine(5),

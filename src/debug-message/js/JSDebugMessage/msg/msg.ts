@@ -16,6 +16,11 @@ import {
   emptyBlockDebuggingMsg,
 } from '../helpers';
 import { JSDebugMessageAnonymous } from '../../JSDebugMessageAnonymous';
+import {
+  detectLanguage,
+  getLogFunction,
+  ProgrammingLanguage,
+} from '../../../../utilities/languageDetection';
 
 function omit<T extends object, K extends keyof T>(
   obj: T,
@@ -59,11 +64,20 @@ function constructDebuggingMsg(
   extensionProperties: ExtensionProperties,
   debuggingMsgContent: string,
   spacesBeforeMsg: string,
+  document: TextDocument,
 ): string {
+  // Detect the current language and get appropriate log function
+  const language = detectLanguage(document.languageId);
+  const languageLogFunction = getLogFunction(language);
+
   const logFunction =
-    extensionProperties.logFunction !== 'log'
-      ? extensionProperties.logFunction
-      : `console.${extensionProperties.logType}`;
+    language === ProgrammingLanguage.JAVASCRIPT ||
+    language === ProgrammingLanguage.TYPESCRIPT
+      ? extensionProperties.logFunction !== 'log'
+        ? extensionProperties.logFunction
+        : `console.${extensionProperties.logType}`
+      : languageLogFunction;
+
   const wrappingMsg = `${logFunction}(${extensionProperties.quote}${
     extensionProperties.logMessagePrefix
   } ${'-'.repeat(debuggingMsgContent.length - 16)}${
@@ -135,6 +149,11 @@ function constructDebuggingMsgContent(
     insertEnclosingClass,
     insertEnclosingFunction,
   } = extensionProperties;
+
+  // Detect the current language and get appropriate log function
+  const language = detectLanguage(document.languageId);
+  const languageLogFunction = getLogFunction(language);
+
   const fileName = document.fileName.includes('/')
     ? document.fileName.split('/')[document.fileName.split('/').length - 1]
     : document.fileName.split('\\')[document.fileName.split('\\').length - 1];
@@ -158,9 +177,17 @@ function constructDebuggingMsgContent(
   }
   const semicolon: string = extensionProperties.addSemicolonInTheEnd ? ';' : '';
   const quoteToUse: string = debuggingMsgQuote(quote, selectedVar);
-  return `${
-    logFunction !== 'log' ? logFunction : `console.${logType}`
-  }(${quoteToUse}${logMessagePrefix}${
+
+  // Use the detected language's log function or fall back to console.log
+  const finalLogFunction =
+    language === ProgrammingLanguage.JAVASCRIPT ||
+    language === ProgrammingLanguage.TYPESCRIPT
+      ? logFunction !== 'log'
+        ? logFunction
+        : `console.${logType}`
+      : languageLogFunction;
+
+  return `${finalLogFunction}(${quoteToUse}${logMessagePrefix}${
     logMessagePrefix.length !== 0 &&
     delimiterInsideMessage.length !== 0 &&
     logMessagePrefix !== `${delimiterInsideMessage} `
@@ -236,6 +263,7 @@ export function msg(
     extensionProperties,
     debuggingMsgContent,
     spacesBeforeMsg,
+    document,
   );
   const selectedVarLine = document.lineAt(lineOfSelectedVar);
   const selectedVarLineLoc = selectedVarLine.text;

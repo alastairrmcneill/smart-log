@@ -1,4 +1,4 @@
-# 🧪 Turbo Console Log – Mocha Tests
+# 🧪 Smart Log Log – Mocha Tests
 
 This folder contains **integration tests** that execute the extension inside a real VSCode instance.  
 We use **Mocha** here due to its compatibility with the official [VSCode Extension Test Runner](https://code.visualstudio.com/api/working-with-extensions/testing-extension).

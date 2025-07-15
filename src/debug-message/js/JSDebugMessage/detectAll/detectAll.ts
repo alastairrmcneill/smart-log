@@ -7,6 +7,11 @@ import {
 import { closingContextLine } from '../../../../utilities';
 import { spacesBeforeLogMsg } from '../helpers';
 import { logFunctionToUse } from './helpers';
+import {
+  detectLanguage,
+  getLogFunction,
+  ProgrammingLanguage,
+} from '../../../../utilities/languageDetection';
 
 export function detectAll(
   document: TextDocument,
@@ -16,18 +21,26 @@ export function detectAll(
   delimiterInsideMessage: ExtensionProperties['delimiterInsideMessage'],
   args?: unknown[],
 ): Message[] {
-  const logFunctionToUseResult: string = logFunctionToUse(
-    logFunction,
-    logType,
-    args,
-  );
+  // Detect the current language and get appropriate log function
+  const language = detectLanguage(document.languageId);
+
+  let logFunctionToUseResult: string;
+  if (
+    language === ProgrammingLanguage.JAVASCRIPT ||
+    language === ProgrammingLanguage.TYPESCRIPT
+  ) {
+    logFunctionToUseResult = logFunctionToUse(logFunction, logType, args);
+  } else {
+    logFunctionToUseResult = getLogFunction(language);
+  }
+
   const documentNbrOfLines: number = document.lineCount;
   const logMessages: Message[] = [];
   for (let i = 0; i < documentNbrOfLines; i++) {
-    const turboConsoleLogMessage = new RegExp(
+    const smartLogMessage = new RegExp(
       logFunctionToUseResult.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'),
     );
-    if (turboConsoleLogMessage.test(document.lineAt(i).text)) {
+    if (smartLogMessage.test(document.lineAt(i).text)) {
       const logMessage: Message = {
         spaces: '',
         lines: [],

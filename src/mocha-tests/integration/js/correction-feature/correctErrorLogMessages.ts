@@ -28,29 +28,28 @@ export default (): void => {
 
     it('Should update outdated error log messages with the correct filename and line number', async () => {
       const { activeTextEditor } = vscode.window;
-      expectActiveTextEditorWithFile(activeTextEditor, 'correctErrorLogMessages.js');
+      expectActiveTextEditorWithFile(
+        activeTextEditor,
+        'correctErrorLogMessages.js',
+      );
 
       if (activeTextEditor) {
         const document = activeTextEditor.document;
         const currentFileName = document.fileName.split('/').pop() ?? '';
 
         // Execute the command to correct log messages
-        await vscode.commands.executeCommand(
-          'turboConsoleLog.correctAllLogMessages',
-          [
-            {
-              logType: 'error',
-            },
-          ],
-        );
-        const logMessagesLines = [
-            naturalEditorLine(4),
-            naturalEditorLine(9),
-          ];
+        await vscode.commands.executeCommand('smartLog.correctAllLogMessages', [
+          {
+            logType: 'error',
+          },
+        ]);
+        const logMessagesLines = [naturalEditorLine(4), naturalEditorLine(9)];
 
         // Wait for the document to reflect changes
         await Promise.all(
-          documentLinesChanged(activeTextEditor.document, [...logMessagesLines]),
+          documentLinesChanged(activeTextEditor.document, [
+            ...logMessagesLines,
+          ]),
         );
         for (const logMessageLine of logMessagesLines) {
           const lineText = document

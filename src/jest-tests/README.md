@@ -1,4 +1,4 @@
-# ✅ Turbo Console Log – Jest Tests
+# ✅ Smart Log Log – Jest Tests
 
 This folder contains **unit and integration tests** powered by **Jest**.
 

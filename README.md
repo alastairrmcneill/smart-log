@@ -1,111 +1,257 @@
-# Turbo Console Log 🚀
+# Smart Log Log 🚀
 
-[Official Website](https://www.turboconsolelog.io) 🎨  
-[GitHub Repository](https://github.com/Chakroun-Anas/turbo-console-log) 📝
-
----
-
-## 🌟 Why Turbo Console Log?
-
-Turbo Console Log is a **developer’s best friend** when it comes to debugging.
-
-Trusted by **nearly 2 million developers**, it simplifies inserting meaningful log messages and makes debugging **faster and more efficient**.
+**Automating the process of writing meaningful log messages for JavaScript, TypeScript, Dart, and Swift.**
 
 ---
 
-## 🚀 Features at a Glance
+## 🌟 Why Smart Log Log?
 
-✔️ **Insert Meaningful Log Messages** – Quickly generate console logs with helpful context  
-✔️ **Comment, Uncomment, or Delete Logs** – Manage logs with a simple shortcut  
+Smart Log Log is a **developer's best friend** for debugging across multiple programming languages.
+
+**Enhanced with multi-language support**, it now works seamlessly with JavaScript, TypeScript, Dart, and Swift, making debugging **faster and more efficient** across your entire development stack.
+
+---
+
+## 🚀 Multi-Language Support
+
+### 📱 Flutter/Dart Development
+
+```dart
+var username = 'john_doe';
+// Select 'username' and press Ctrl+Alt+L
+print("🚀 ~ username: $username");
+```
+
+### 🍎 iOS/Swift Development
+
+```swift
+let username = "john_doe"
+// Select 'username' and press Ctrl+Alt+L
+print("🚀 ~ username: \(username)")
+```
+
+### 🌐 Web Development (JavaScript/TypeScript)
+
+```javascript
+const username = 'john_doe';
+// Select 'username' and press Ctrl+Alt+L
+console.log('🚀 ~ username:', username);
+```
+
+---
+
+## ✨ Features at a Glance
+
+✔️ **Multi-Language Support** – JavaScript, TypeScript, Dart, and Swift  
+✔️ **Smart Language Detection** – Automatically uses the right log function  
+✔️ **Insert Meaningful Log Messages** – Quickly generate logs with helpful context  
+✔️ **Comment, Uncomment, or Delete Logs** – Manage logs with simple shortcuts  
 ✔️ **Multi-Cursor Support** – Debug multiple variables simultaneously  
 ✔️ **Customizable Log Format** – Personalize how logs appear in your code
 
-📖 **Full Documentation**: [Turbo Console Log Docs](https://www.turboconsolelog.io/documentation/features)
+---
+
+## ⚡ Keybindings
+
+| Operation              | Keybinding    | Description                             |
+| ---------------------- | ------------- | --------------------------------------- |
+| **Insert log message** | `Ctrl+Alt+L`  | Generate log for selected variable      |
+| **Comment all logs**   | `Alt+Shift+C` | Comment all extension-generated logs    |
+| **Uncomment all logs** | `Alt+Shift+U` | Uncomment all extension-generated logs  |
+| **Delete all logs**    | `Alt+Shift+D` | Remove all extension-generated logs     |
+| **Correct all logs**   | `Alt+Shift+X` | Fix/update all extension-generated logs |
 
 ---
 
-## 🔧 Configuration & Customization
+## 🎯 Language-Specific Examples
 
-Want to customize your logs? Turbo Console Log allows you to adjust:
+### 🐦 Dart (Flutter Development)
 
-✅ Prefixes & Suffixes  
-✅ Log Function (`console.log`, `console.warn`, `console.error`, etc.)  
-✅ Quote Type (`'`, `"`, or \``)  
-✅ Filename & Line Number Inclusion
+```dart
+// Working with variables
+var user = {'name': 'John', 'age': 30};
+print("🚀 ~ user: $user");
 
-📖 **Explore Settings**: [Settings Documentation](https://www.turboconsolelog.io/documentation/settings)
+// In functions with context
+int calculateSum(int a, int b) {
+    var result = a + b;
+    print("🚀 ~ calculateSum ~ result: $result");
+    return result;
+}
 
----
+// In classes
+class UserService {
+    void createUser(String name) {
+        var userId = generateId();
+        print("🚀 ~ UserService ~ createUser ~ userId: $userId");
+    }
+}
+```
 
-## 🚀 What’s New in v3.2.0? – AST Introduction & Core Detection Fixes
+### 🍎 Swift (iOS Development)
 
-This release introduces AST parsing for specific cases, increasing log placement accuracy without affecting performance.
+```swift
+// Working with variables
+let user = ["name": "John", "age": 30]
+print("🚀 ~ user: \(user)")
 
-### 🧠 AST-Based Enhancements
+// In functions with context
+func calculateSum(a: Int, b: Int) -> Int {
+    let result = a + b
+    print("🚀 ~ calculateSum ~ result: \(result)")
+    return result
+}
 
-- 📐 **AST Support:** Introduced AST parsing for ternary expressions and function parameters
-- 🧠 **More reliable Log Placement:** Improved accuracy for ternary expressions and function parameters
-- 🧪 **Test Coverage:** New test cases added to validate AST logic and key edge scenarios
+// In classes/structs
+struct UserService {
+    func createUser(name: String) {
+        let userId = generateId()
+        print("🚀 ~ UserService ~ createUser ~ userId: \(userId)")
+    }
+}
+```
 
-### 🔧 Core Fixes
+### 🌐 JavaScript/TypeScript (Web Development)
 
-- 🐛 **Object Literal Detection:** Fixed handling of assignments with complex type annotations
-- 🛠️ **Default Config Values:** Now correctly respects default values, reducing false positives
+```javascript
+// Working with variables
+const user = { name: 'John', age: 30 };
+console.log('🚀 ~ user:', user);
 
----
+// In functions with context
+function calculateSum(a, b) {
+  const result = a + b;
+  console.log('🚀 ~ calculateSum ~ result:', result);
+  return result;
+}
 
-👉 [Read the full v3.2.0 release article](https://www.turboconsolelog.io/articles/release-320)  
-👉 [Learn more about Turbo PRO](https://www.turboconsolelog.io/pro)
-
----
-
-## ✉️ Stay in the Loop – Join the Newsletter
-
-🚀 **Get early access to new features, exclusive updates, and behind-the-scenes insights!**  
-Be the first to know about **Turbo Console Log improvements, releases, and launch news**.
-
-📩 **Join the newsletter** → [https://www.turboconsolelog.io/join](https://www.turboconsolelog.io/join)
-
----
-
-## 💙 Support Turbo Console Log
-
-Turbo Console Log is **free & open-source**, maintained with passion by developers like you.
-
-If you’ve found value in it, you can help keep it growing:
-
-🔗 **[Visit the Sponsorship Page](https://www.turboconsolelog.io/sponsorship)**
-
-Your support fuels **bug fixes, improvements, and new features**, ensuring Turbo Console Log continues evolving for **millions of developers—including YOU!**
-
-Whether you contribute or not, we’re happy to have you as part of this journey. 🚀
-
----
-
-## 📢 Stay Updated
-
-🔗 **[Follow Turbo Console Log Updates](https://www.turboconsolelog.io/articles)**  
-💬 **Join the Discussion** → [GitHub Discussions](https://github.com/Chakroun-Anas/turbo-console-log/discussions)
-
----
-
-## 📧 Contact
-
-📩 **Support:** [support@turboconsolelog.io](mailto:support@turboconsolelog.io)  
-📩 **Feedback:** [feedback@turboconsolelog.io](mailto:feedback@turboconsolelog.io)  
-📩 **Sponsorship:** [sponsorship@turboconsolelog.io](mailto:sponsorship@turboconsolelog.io)
-
----
-
-## 🎯 Contribute
-
-Turbo Console Log is **open for contributions!**  
-Want to improve it? Report issues, suggest features, or submit pull requests:
-
-👉 **[Contribute on GitHub](https://github.com/Chakroun-Anas/turbo-console-log)**
+// In classes
+class UserService {
+  createUser(name) {
+    const userId = this.generateId();
+    console.log('🚀 ~ UserService ~ createUser ~ userId:', userId);
+  }
+}
+```
 
 ---
 
-## 📜 License
+## ⚙️ Configuration & Customization
 
-MIT License &copy; Turbo Console Log
+The extension automatically detects your file type and uses the appropriate logging function:
+
+- **JavaScript/TypeScript**: `console.log()`, `console.warn()`, `console.error()`, etc.
+- **Dart**: `print()`
+- **Swift**: `print()`
+
+### Available Settings
+
+| Setting                            | Description                       | Default |
+| ---------------------------------- | --------------------------------- | ------- |
+| `smartLog.logMessagePrefix`        | Prefix for log messages           | `🚀`    |
+| `smartLog.logMessageSuffix`        | Suffix for log messages           | `:`     |
+| `smartLog.includeFilename`         | Include filename in logs          | `false` |
+| `smartLog.includeLineNum`          | Include line numbers              | `false` |
+| `smartLog.insertEnclosingClass`    | Include class name                | `true`  |
+| `smartLog.insertEnclosingFunction` | Include function name             | `true`  |
+| `smartLog.wrapLogMessage`          | Wrap logs with decorative borders | `false` |
+| `smartLog.addSemicolonInTheEnd`    | Add semicolon at end              | `false` |
+| `smartLog.quote`                   | Quote type (`"`, `'`, `` ` ``)    | `"`     |
+
+---
+
+## 📦 Installation
+
+1. Open VS Code
+2. Go to Extensions (`Ctrl+Shift+X`)
+3. Search for **"Smart Log Log"**
+4. Click **Install**
+5. Start debugging across JavaScript, TypeScript, Dart, and Swift! 🎉
+
+---
+
+## 🛠️ Development Workflow Examples
+
+### 📱 Flutter App Development
+
+```dart
+// In your Flutter widgets
+class MyWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var theme = Theme.of(context);
+    print("🚀 ~ MyWidget ~ build ~ theme: $theme");
+
+    return Scaffold(
+      body: Center(
+        child: Text('Hello Flutter!'),
+      ),
+    );
+  }
+}
+```
+
+### 🍎 iOS App Development
+
+```swift
+// In your iOS ViewControllers
+class ViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let userDefaults = UserDefaults.standard
+        print("🚀 ~ ViewController ~ viewDidLoad ~ userDefaults: \(userDefaults)")
+    }
+}
+```
+
+### 🌐 Web Development
+
+```typescript
+// In your React/Angular/Vue components
+interface User {
+  id: string;
+  name: string;
+}
+
+function UserComponent({ userId }: { userId: string }) {
+  const user = fetchUser(userId);
+  console.log("🚀 ~ UserComponent ~ user:", user);
+
+  return <div>{user.name}</div>;
+}
+```
+
+---
+
+## 🆚 Comparison with Original Smart Log Log
+
+| Feature                    | Original | Smart Log Log |
+| -------------------------- | -------- | ------------- |
+| JavaScript/TypeScript      | ✅       | ✅            |
+| Dart Support               | ❌       | ✅            |
+| Swift Support              | ❌       | ✅            |
+| Auto Language Detection    | ❌       | ✅            |
+| Cross-Platform Development | ❌       | ✅            |
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Whether you're:
+
+- 🐛 Reporting bugs
+- 💡 Suggesting new features
+- 🔧 Submitting code improvements
+- 📚 Improving documentation
+
+---
+
+## 📄 License
+
+See LICENSE.txt file for details.
+
+---
+
+**Enjoy productive debugging across JavaScript, TypeScript, Dart, and Swift! 🚀**
+
+_Perfect for full-stack developers, mobile developers, and teams working across multiple platforms._

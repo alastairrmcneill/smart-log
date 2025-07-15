@@ -1,5 +1,5 @@
 const person = {
-  fullName: 'Chakroun Anas',
+  fullName: 'Alastair McNeill',
   age: 28,
 };
 

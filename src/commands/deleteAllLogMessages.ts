@@ -3,7 +3,7 @@ import { Command, Message } from '../entities';
 
 export function deleteAllLogMessagesCommand(): Command {
   return {
-    name: 'turboConsoleLog.deleteAllLogMessages',
+    name: 'smartLog.deleteAllLogMessages',
     handler: async ({ extensionProperties, debugMessage, args }) => {
       const { logFunction, logType, logMessagePrefix, delimiterInsideMessage } =
         extensionProperties;

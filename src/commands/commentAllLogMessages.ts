@@ -3,7 +3,7 @@ import { Command, Message } from '../entities';
 
 export function commentAllLogMessagesCommand(): Command {
   return {
-    name: 'turboConsoleLog.commentAllLogMessages',
+    name: 'smartLog.commentAllLogMessages',
     handler: async ({ extensionProperties, debugMessage, args }) => {
       const { logFunction, logType, logMessagePrefix, delimiterInsideMessage } =
         extensionProperties;

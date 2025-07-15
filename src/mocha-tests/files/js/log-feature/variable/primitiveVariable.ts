@@ -1,6 +1,6 @@
 // @ts-nocheck
 
-const fullName = 'Chakroun Anas';
+const fullName = 'Alastair McNeill';
 
 const config: vscode.WorkspaceConfiguration =
-  vscode.workspace.getConfiguration('turboConsoleLog');
+  vscode.workspace.getConfiguration('smartLog');

@@ -14,14 +14,15 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["**/*.ts"],
+  "include": ["src/**/*.ts"],
   "exclude": [
     "node_modules",
     ".vscode-test",
     "src/mocha-tests/files",
     "out/mocha-tests/files",
     "jest.config.ts",
-    "src/jest-tests"
+    "src/jest-tests",
+    "examples"
   ],
   "linterOptions": {
     "exclude": ["src/test/files/js/**"]

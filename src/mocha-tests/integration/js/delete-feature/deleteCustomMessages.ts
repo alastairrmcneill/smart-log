@@ -26,16 +26,21 @@ export default (): void => {
     });
     it('Should delete custom messages inserted by the extension', async () => {
       const { activeTextEditor } = vscode.window;
-      expectActiveTextEditorWithFile(activeTextEditor, 'deleteCustomMessages.js');
+      expectActiveTextEditorWithFile(
+        activeTextEditor,
+        'deleteCustomMessages.js',
+      );
       if (activeTextEditor) {
         const originalLineCount = activeTextEditor.document.lineCount;
-        await vscode.commands.executeCommand(
-          'turboConsoleLog.deleteAllLogMessages',
-          [ {
+        await vscode.commands.executeCommand('smartLog.deleteAllLogMessages', [
+          {
             logFunction: 'fancy.debug.func',
-          },],
-        );
-        const customMessagesLines = [naturalEditorLine(2), naturalEditorLine(4)];
+          },
+        ]);
+        const customMessagesLines = [
+          naturalEditorLine(2),
+          naturalEditorLine(4),
+        ];
         await Promise.all(
           documentLinesChanged(activeTextEditor.document, [
             ...customMessagesLines,

@@ -4,42 +4,35 @@ import type { Command } from '../../../entities';
 // Mock each command function
 jest.mock('../../../commands/displayLogMessage', () => ({
   displayLogMessageCommand: () => ({
-    name: 'turboConsoleLog.displayLogMessage',
+    name: 'smartLog.displayLogMessage',
     handler: jest.fn(),
   }),
 }));
 
 jest.mock('../../../commands/commentAllLogMessages', () => ({
   commentAllLogMessagesCommand: () => ({
-    name: 'turboConsoleLog.commentAllLogMessages',
+    name: 'smartLog.commentAllLogMessages',
     handler: jest.fn(),
   }),
 }));
 
 jest.mock('../../../commands/uncommentAllLogMessages', () => ({
   uncommentAllLogMessagesCommand: () => ({
-    name: 'turboConsoleLog.uncommentAllLogMessages',
+    name: 'smartLog.uncommentAllLogMessages',
     handler: jest.fn(),
   }),
 }));
 
 jest.mock('../../../commands/deleteAllLogMessages', () => ({
   deleteAllLogMessagesCommand: () => ({
-    name: 'turboConsoleLog.deleteAllLogMessages',
+    name: 'smartLog.deleteAllLogMessages',
     handler: jest.fn(),
   }),
 }));
 
 jest.mock('../../../commands/correctAllLogMessages', () => ({
   correctAllLogMessagesCommand: () => ({
-    name: 'turboConsoleLog.correctAllLogMessages',
-    handler: jest.fn(),
-  }),
-}));
-
-jest.mock('../../../commands/activateTurboProBundle', () => ({
-  activateTurboProBundleCommand: () => ({
-    name: 'turboConsoleLog.activatePro',
+    name: 'smartLog.correctAllLogMessages',
     handler: jest.fn(),
   }),
 }));
@@ -49,12 +42,12 @@ describe('getAllCommands', () => {
     const commands = getAllCommands();
 
     const expectedNames = [
-      'turboConsoleLog.displayLogMessage',
-      'turboConsoleLog.commentAllLogMessages',
-      'turboConsoleLog.uncommentAllLogMessages',
-      'turboConsoleLog.deleteAllLogMessages',
-      'turboConsoleLog.correctAllLogMessages',
-      'turboConsoleLog.activatePro',
+      'smartLog.displayLogMessage',
+      'smartLog.commentAllLogMessages',
+      'smartLog.uncommentAllLogMessages',
+      'smartLog.deleteAllLogMessages',
+      'smartLog.correctAllLogMessages',
+      'smartLog.activatePro',
     ];
 
     expect(Array.isArray(commands)).toBe(true);

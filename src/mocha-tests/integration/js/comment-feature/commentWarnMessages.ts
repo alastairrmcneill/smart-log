@@ -31,14 +31,11 @@ export default (): void => {
         'commentWarnMessages.js',
       );
       if (activeTextEditor) {
-        await vscode.commands.executeCommand(
-          'turboConsoleLog.commentAllLogMessages',
-          [
-            {
-              logType: 'warn',
-            },
-          ],
-        );
+        await vscode.commands.executeCommand('smartLog.commentAllLogMessages', [
+          {
+            logType: 'warn',
+          },
+        ]);
         await Promise.all(
           documentLinesChanged(activeTextEditor.document, [
             naturalEditorLine(10),
