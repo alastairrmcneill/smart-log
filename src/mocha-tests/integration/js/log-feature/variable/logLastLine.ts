@@ -34,7 +34,7 @@ export default (): void => {
             new NaturalEditorPosition(1, 9),
           ),
         ];
-        await vscode.commands.executeCommand('smartLog.displayLogMessage', []);
+        await vscode.commands.executeCommand('brightLog.displayLogMessage', []);
         // Console log message is appended to the last line of the file starting with /n character
         await Promise.all(documentLinesChanged(activeTextEditor.document, [0]));
         const textDocument = activeTextEditor.document;

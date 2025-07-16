@@ -38,7 +38,7 @@ export default (): void => {
           new NaturalEditorPosition(3, 7),
           new NaturalEditorPosition(3, 20),
         );
-        await vscode.commands.executeCommand('smartLog.displayLogMessage', []);
+        await vscode.commands.executeCommand('brightLog.displayLogMessage', []);
         await Promise.all(
           documentLinesChanged(activeTextEditor.document, [
             expectedLogMessageLine,
@@ -64,7 +64,7 @@ export default (): void => {
           new NaturalEditorPosition(7, 7),
           new NaturalEditorPosition(7, 24),
         );
-        await vscode.commands.executeCommand('smartLog.displayLogMessage', []);
+        await vscode.commands.executeCommand('brightLog.displayLogMessage', []);
         await Promise.all(
           documentLinesChanged(activeTextEditor.document, [
             expectedLogMessageLine,
@@ -90,7 +90,7 @@ export default (): void => {
           new NaturalEditorPosition(11, 7),
           new NaturalEditorPosition(11, 34),
         );
-        await vscode.commands.executeCommand('smartLog.displayLogMessage', []);
+        await vscode.commands.executeCommand('brightLog.displayLogMessage', []);
         await Promise.all(
           documentLinesChanged(activeTextEditor.document, [
             expectedLogMessageLine,
@@ -116,7 +116,7 @@ export default (): void => {
           new NaturalEditorPosition(18, 22),
           new NaturalEditorPosition(18, 27),
         );
-        await vscode.commands.executeCommand('smartLog.displayLogMessage', []);
+        await vscode.commands.executeCommand('brightLog.displayLogMessage', []);
         await Promise.all(
           documentLinesChanged(activeTextEditor.document, [
             expectedLogMessageLine,

@@ -43,7 +43,7 @@ describe.only('activate - command registration', () => {
       .spyOn(vscode.workspace, 'getConfiguration')
       .mockImplementation(getConfigurationMock);
     jest.spyOn(vscode.extensions, 'getExtension').mockImplementation(() => ({
-      id: 'AlastairMcNeilll.smart-log',
+      id: 'AlastairMcNeilll.bright-log',
       extensionUri: {} as vscode.Uri,
       extensionKind: 1,
       extensionPath: '',

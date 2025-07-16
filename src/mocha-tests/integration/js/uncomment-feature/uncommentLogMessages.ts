@@ -31,7 +31,7 @@ export default (): void => {
       );
       if (activeTextEditor) {
         await vscode.commands.executeCommand(
-          'smartLog.uncommentAllLogMessages',
+          'brightLog.uncommentAllLogMessages',
           [],
         );
         await Promise.all(

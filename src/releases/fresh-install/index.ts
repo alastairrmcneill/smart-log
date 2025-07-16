@@ -4,7 +4,7 @@ export function getHtmlWebView(): string {
     <!DOCTYPE html>
     <html>
     <head>
-        <title>Smart Log - Multi-Language Console Logging</title>
+        <title>Bright Log - Multi-Language Console Logging</title>
         <meta charset="UTF-8">
         <style>
             body { 
@@ -144,13 +144,13 @@ export function getHtmlWebView(): string {
     <body>
         <div class="container">
             <div class="header">
-                <h1>📱 Smart Log</h1>
+                <h1>📱 Bright Log</h1>
                 <div class="subtitle">Multi-Language Console Logging for Modern Development</div>
             </div>
             
             <div class="content">
                 <div class="highlight">
-                    <h2>🎉 Welcome to Smart Log!</h2>
+                    <h2>🎉 Welcome to Bright Log!</h2>
                     <p>Automating the process of writing meaningful log messages across <strong>JavaScript, TypeScript, Dart, and Swift</strong>.</p>
                     <p>Perfect for full-stack developers, mobile developers, and teams working across multiple platforms.</p>
                 </div>
@@ -257,22 +257,22 @@ class UserService {
                         <tr>
                             <td><strong>Comment All Logs</strong></td>
                             <td><span class="keybinding">Alt+Shift+C</span></td>
-                            <td>Comment all Smart Log generated messages</td>
+                            <td>Comment all Bright Log generated messages</td>
                         </tr>
                         <tr>
                             <td><strong>Uncomment All Logs</strong></td>
                             <td><span class="keybinding">Alt+Shift+U</span></td>
-                            <td>Uncomment all Smart Log generated messages</td>
+                            <td>Uncomment all Bright Log generated messages</td>
                         </tr>
                         <tr>
                             <td><strong>Delete All Logs</strong></td>
                             <td><span class="keybinding">Alt+Shift+D</span></td>
-                            <td>Remove all Smart Log generated messages</td>
+                            <td>Remove all Bright Log generated messages</td>
                         </tr>
                         <tr>
                             <td><strong>Correct All Logs</strong></td>
                             <td><span class="keybinding">Alt+Shift+X</span></td>
-                            <td>Fix/update all Smart Log generated messages</td>
+                            <td>Fix/update all Bright Log generated messages</td>
                         </tr>
                     </table>
                 </div>
@@ -329,32 +329,32 @@ function UserComponent({ userId }: { userId: string }) {
                             <th>Description</th>
                         </tr>
                         <tr>
-                            <td><code>smartLog.logMessagePrefix</code></td>
+                            <td><code>brightLog.logMessagePrefix</code></td>
                             <td>"📱"</td>
                             <td>Prefix for all log messages</td>
                         </tr>
                         <tr>
-                            <td><code>smartLog.includeFilename</code></td>
+                            <td><code>brightLog.includeFilename</code></td>
                             <td>false</td>
                             <td>Include filename in log messages</td>
                         </tr>
                         <tr>
-                            <td><code>smartLog.includeLineNum</code></td>
+                            <td><code>brightLog.includeLineNum</code></td>
                             <td>false</td>
                             <td>Include line numbers in logs</td>
                         </tr>
                         <tr>
-                            <td><code>smartLog.insertEnclosingClass</code></td>
+                            <td><code>brightLog.insertEnclosingClass</code></td>
                             <td>true</td>
                             <td>Include class name context</td>
                         </tr>
                         <tr>
-                            <td><code>smartLog.insertEnclosingFunction</code></td>
+                            <td><code>brightLog.insertEnclosingFunction</code></td>
                             <td>true</td>
                             <td>Include function name context</td>
                         </tr>
                         <tr>
-                            <td><code>smartLog.wrapLogMessage</code></td>
+                            <td><code>brightLog.wrapLogMessage</code></td>
                             <td>false</td>
                             <td>Wrap logs with decorative borders</td>
                         </tr>
@@ -366,20 +366,20 @@ function UserComponent({ userId }: { userId: string }) {
                     <ol>
                         <li><strong>Select a variable</strong> in any supported file (.js, .ts, .dart, .swift)</li>
                         <li><strong>Press <span class="keybinding">Ctrl+Alt+L</span></strong></li>
-                        <li><strong>Watch</strong> as Smart Log generates the perfect log statement for your language!</li>
+                        <li><strong>Watch</strong> as Bright Log generates the perfect log statement for your language!</li>
                     </ol>
                     
                     <div class="highlight">
                         <h3>🎯 Perfect for:</h3>
                         <p><strong>Full-Stack Developers</strong> • <strong>Mobile Developers</strong> • <strong>Cross-Platform Teams</strong></p>
-                        <p>Whether you're building Flutter apps, iOS apps, or web applications, Smart Log has you covered!</p>
+                        <p>Whether you're building Flutter apps, iOS apps, or web applications, Bright Log has you covered!</p>
                     </div>
                 </div>
             </div>
 
             <div class="cta">
                 <h2>🎉 Happy Debugging!</h2>
-                <p>Smart Log is now ready to supercharge your development workflow across all your favorite languages.</p>
+                <p>Bright Log is now ready to supercharge your development workflow across all your favorite languages.</p>
                 <p><strong>Press <span class="keybinding">Ctrl+Alt+L</span> on any variable to get started!</strong></p>
             </div>
         </div>

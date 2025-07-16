@@ -7,7 +7,7 @@ import correctDebugLogMessage from './correctDebugLogMessages';
 import correctCustomLogMessage from './correctCustomLogMessages';
 
 export default (): void => {
-  describe('Correct smart log messages line number or file name if necessary', () => {
+  describe('Correct bright log messages line number or file name if necessary', () => {
     correctLogMessage();
     correctWarnLogMessage();
     correctErrorLogMessage();

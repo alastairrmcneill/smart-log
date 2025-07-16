@@ -1,4 +1,4 @@
-# ✅ Smart Log Log – Jest Tests
+# ✅ Bright Log – Jest Tests
 
 This folder contains **unit and integration tests** powered by **Jest**.
 

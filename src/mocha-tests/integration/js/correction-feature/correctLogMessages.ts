@@ -35,7 +35,7 @@ export default (): void => {
 
         // Execute the command to correct log messages
         await vscode.commands.executeCommand(
-          'smartLog.correctAllLogMessages',
+          'brightLog.correctAllLogMessages',
           [],
         );
 

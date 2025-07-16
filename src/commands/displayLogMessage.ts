@@ -4,7 +4,7 @@ import { getTabSize } from '../utilities';
 
 export function displayLogMessageCommand(): Command {
   return {
-    name: 'smartLog.displayLogMessage',
+    name: 'brightLog.displayLogMessage',
     handler: async ({ extensionProperties, debugMessage }) => {
       const editor: vscode.TextEditor | undefined =
         vscode.window.activeTextEditor;

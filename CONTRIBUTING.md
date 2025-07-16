@@ -1,6 +1,6 @@
-# Contributing to Smart Log 📱
+# Contributing to Bright Log 📱
 
-Thank you for your interest in contributing to Smart Log! This guide will help you get started with development and contributing to this multi-language VS Code extension.
+Thank you for your interest in contributing to Bright Log! This guide will help you get started with development and contributing to this multi-language VS Code extension.
 
 ## 📋 Table of Contents
 
@@ -36,8 +36,8 @@ This extension currently supports:
 1. **Fork and Clone the Repository**
 
    ```bash
-   git clone https://github.com/your-username/smart-log.git
-   cd smart-log
+   git clone https://github.com/your-username/bright-log.git
+   cd bright-log
    ```
 
 2. **Install Dependencies**
@@ -303,8 +303,8 @@ Include:
 
 ## 📄 License
 
-By contributing to Smart Log, you agree that your contributions will be licensed under the same license as the project.
+By contributing to Bright Log, you agree that your contributions will be licensed under the same license as the project.
 
 ---
 
-Thank you for contributing to Smart Log! Your help makes this extension better for developers worldwide. 📱
+Thank you for contributing to Bright Log! Your help makes this extension better for developers worldwide. 📱

@@ -35,7 +35,7 @@ export default (): void => {
             new NaturalEditorPosition(4, 51),
           ),
         ];
-        await vscode.commands.executeCommand('smartLog.displayLogMessage', []);
+        await vscode.commands.executeCommand('brightLog.displayLogMessage', []);
         await Promise.all(
           documentLinesChanged(activeTextEditor.document, [
             naturalEditorLine(5),

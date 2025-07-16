@@ -31,7 +31,7 @@ export default (): void => {
         'commentErrorMessages.js',
       );
       if (activeTextEditor) {
-        await vscode.commands.executeCommand('smartLog.commentAllLogMessages', [
+        await vscode.commands.executeCommand('brightLog.commentAllLogMessages', [
           {
             logType: 'error',
           },

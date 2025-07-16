@@ -3,7 +3,7 @@ import { Command, Message } from '../entities';
 
 export function commentAllLogMessagesCommand(): Command {
   return {
-    name: 'smartLog.commentAllLogMessages',
+    name: 'brightLog.commentAllLogMessages',
     handler: async ({ extensionProperties, debugMessage, args }) => {
       const { logFunction, logType, logMessagePrefix, delimiterInsideMessage } =
         extensionProperties;

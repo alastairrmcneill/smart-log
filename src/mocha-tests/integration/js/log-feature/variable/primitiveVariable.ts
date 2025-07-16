@@ -35,7 +35,7 @@ export default (): void => {
             new NaturalEditorPosition(3, 15),
           ),
         ];
-        await vscode.commands.executeCommand('smartLog.displayLogMessage', []);
+        await vscode.commands.executeCommand('brightLog.displayLogMessage', []);
         await Promise.all(
           documentLinesChanged(activeTextEditor.document, [
             naturalEditorLine(4),
@@ -46,7 +46,7 @@ export default (): void => {
         expect(/console\.log\(.*/.test(logMessage)).to.equal(true);
       }
     });
-    it('Should insert smart log message after complete multiline assignment', async () => {
+    it('Should insert bright log message after complete multiline assignment', async () => {
       const { activeTextEditor } = vscode.window;
       expectActiveTextEditorWithFile(activeTextEditor, 'primitiveVariable.ts');
       if (activeTextEditor) {
@@ -56,7 +56,7 @@ export default (): void => {
             new NaturalEditorPosition(5, 13),
           ),
         ];
-        await vscode.commands.executeCommand('smartLog.displayLogMessage', []);
+        await vscode.commands.executeCommand('brightLog.displayLogMessage', []);
         await Promise.all(
           documentLinesChanged(activeTextEditor.document, [
             naturalEditorLine(7),

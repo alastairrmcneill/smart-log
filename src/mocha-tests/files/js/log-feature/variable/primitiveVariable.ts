@@ -3,4 +3,4 @@
 const fullName = 'Alastair McNeill';
 
 const config: vscode.WorkspaceConfiguration =
-  vscode.workspace.getConfiguration('smartLog');
+  vscode.workspace.getConfiguration('brightLog');

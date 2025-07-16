@@ -38,7 +38,7 @@ export default (): void => {
         const currentFileName = document.fileName.split('/').pop() ?? '';
 
         // Execute the command to correct log messages
-        await vscode.commands.executeCommand('smartLog.correctAllLogMessages', [
+        await vscode.commands.executeCommand('brightLog.correctAllLogMessages', [
           {
             logType: 'warn',
           },

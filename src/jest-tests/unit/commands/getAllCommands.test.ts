@@ -4,35 +4,35 @@ import type { Command } from '../../../entities';
 // Mock each command function
 jest.mock('../../../commands/displayLogMessage', () => ({
   displayLogMessageCommand: () => ({
-    name: 'smartLog.displayLogMessage',
+    name: 'brightLog.displayLogMessage',
     handler: jest.fn(),
   }),
 }));
 
 jest.mock('../../../commands/commentAllLogMessages', () => ({
   commentAllLogMessagesCommand: () => ({
-    name: 'smartLog.commentAllLogMessages',
+    name: 'brightLog.commentAllLogMessages',
     handler: jest.fn(),
   }),
 }));
 
 jest.mock('../../../commands/uncommentAllLogMessages', () => ({
   uncommentAllLogMessagesCommand: () => ({
-    name: 'smartLog.uncommentAllLogMessages',
+    name: 'brightLog.uncommentAllLogMessages',
     handler: jest.fn(),
   }),
 }));
 
 jest.mock('../../../commands/deleteAllLogMessages', () => ({
   deleteAllLogMessagesCommand: () => ({
-    name: 'smartLog.deleteAllLogMessages',
+    name: 'brightLog.deleteAllLogMessages',
     handler: jest.fn(),
   }),
 }));
 
 jest.mock('../../../commands/correctAllLogMessages', () => ({
   correctAllLogMessagesCommand: () => ({
-    name: 'smartLog.correctAllLogMessages',
+    name: 'brightLog.correctAllLogMessages',
     handler: jest.fn(),
   }),
 }));
@@ -42,11 +42,11 @@ describe('getAllCommands', () => {
     const commands = getAllCommands();
 
     const expectedNames = [
-      'smartLog.displayLogMessage',
-      'smartLog.commentAllLogMessages',
-      'smartLog.uncommentAllLogMessages',
-      'smartLog.deleteAllLogMessages',
-      'smartLog.correctAllLogMessages',
+      'brightLog.displayLogMessage',
+      'brightLog.commentAllLogMessages',
+      'brightLog.uncommentAllLogMessages',
+      'brightLog.deleteAllLogMessages',
+      'brightLog.correctAllLogMessages',
     ];
 
     expect(Array.isArray(commands)).toBe(true);

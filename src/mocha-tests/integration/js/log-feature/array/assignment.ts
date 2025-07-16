@@ -25,7 +25,7 @@ export default (): void => {
         [],
       );
     });
-    it('Should insert smart log message related to an array assigned to a variable', async () => {
+    it('Should insert bright log message related to an array assigned to a variable', async () => {
       const { activeTextEditor } = vscode.window;
       expectActiveTextEditorWithFile(activeTextEditor, 'assignment.ts');
       if (activeTextEditor) {
@@ -35,7 +35,7 @@ export default (): void => {
             new NaturalEditorPosition(6, 22),
           ),
         ];
-        await vscode.commands.executeCommand('smartLog.displayLogMessage', []);
+        await vscode.commands.executeCommand('brightLog.displayLogMessage', []);
         await Promise.all(
           documentLinesChanged(activeTextEditor.document, [
             naturalEditorLine(19),
@@ -57,7 +57,7 @@ export default (): void => {
             new NaturalEditorPosition(23, 13),
           ),
         ];
-        await vscode.commands.executeCommand('smartLog.displayLogMessage', []);
+        await vscode.commands.executeCommand('brightLog.displayLogMessage', []);
         await Promise.all(
           documentLinesChanged(activeTextEditor.document, [
             naturalEditorLine(29),

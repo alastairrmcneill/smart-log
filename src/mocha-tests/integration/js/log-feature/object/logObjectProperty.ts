@@ -35,7 +35,7 @@ export default (): void => {
             new NaturalEditorPosition(3, 8),
           ),
         ];
-        await vscode.commands.executeCommand('smartLog.displayLogMessage', []);
+        await vscode.commands.executeCommand('brightLog.displayLogMessage', []);
         // Console log message is appended to the end of the document starting with /n character
         await Promise.all(
           documentLinesChanged(activeTextEditor.document, [
@@ -58,7 +58,7 @@ export default (): void => {
             new NaturalEditorPosition(5, 15),
           ),
         ];
-        await vscode.commands.executeCommand('smartLog.displayLogMessage', []);
+        await vscode.commands.executeCommand('brightLog.displayLogMessage', []);
         // Console log message is appended to the end of the document starting with /n character
         await Promise.all(
           documentLinesChanged(activeTextEditor.document, [
@@ -81,7 +81,7 @@ export default (): void => {
             new NaturalEditorPosition(6, 22),
           ),
         ];
-        await vscode.commands.executeCommand('smartLog.displayLogMessage', []);
+        await vscode.commands.executeCommand('brightLog.displayLogMessage', []);
         // Console log message is appended to the end of the document starting with /n character
         await Promise.all(
           documentLinesChanged(activeTextEditor.document, [

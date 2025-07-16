@@ -2,7 +2,7 @@
 export const releaseNotes: Record<string, { webViewHtml: string }> = {
   '1.0.0': {
     webViewHtml:
-      '<html><body><h1>Smart Log v1.0.0</h1><p>Multi-language support for JavaScript, TypeScript, Dart, and Swift!</p></body></html>',
+      '<html><body><h1>Bright Log v1.0.0</h1><p>Multi-language support for JavaScript, TypeScript, Dart, and Swift!</p></body></html>',
   },
 };
 

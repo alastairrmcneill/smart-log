@@ -1,6 +1,6 @@
 {
-  "name": "smart-log",
-  "displayName": "Smart Log",
+  "name": "bright-log",
+  "displayName": "Bright Log",
   "description": "Automating the process of writing meaningful log messages for JavaScript, TypeScript, Dart, and Swift.",
   "version": "1.0.0",
   "publisher": "AlastairMcNeill",
@@ -24,69 +24,69 @@
   "contributes": {
     "configuration": {
       "type": "object",
-      "title": "Smart Log Configuration",
+      "title": "Bright Log Configuration",
       "properties": {
-        "smartLog.wrapLogMessage": {
+        "brightLog.wrapLogMessage": {
           "type": "boolean",
           "default": false,
           "description": "Determine if the log message should be wrapped or not."
         },
-        "smartLog.logMessagePrefix": {
+        "brightLog.logMessagePrefix": {
           "type": "string",
           "default": "📱",
           "description": "The prefix of the log message."
         },
-        "smartLog.logMessageSuffix": {
+        "brightLog.logMessageSuffix": {
           "type": "string",
           "default": ":",
           "description": "The suffix of the log message."
         },
-        "smartLog.includeFilename": {
+        "brightLog.includeFilename": {
           "type": "boolean",
           "default": false,
           "description": "Whether to include the file name of the log message."
         },
-        "smartLog.includeLineNum": {
+        "brightLog.includeLineNum": {
           "type": "boolean",
           "default": false,
           "description": "Whether to include the line number of the log message."
         },
-        "smartLog.addSemicolonInTheEnd": {
+        "brightLog.addSemicolonInTheEnd": {
           "type": "boolean",
           "default": false,
           "description": "Whether to add or not a semicolon in the end of the log message."
         },
-        "smartLog.insertEnclosingClass": {
+        "brightLog.insertEnclosingClass": {
           "type": "boolean",
           "default": true,
           "description": "Whether to insert or not the enclosing class of the selected variable in the log message."
         },
-        "smartLog.logCorrectionNotificationEnabled": {
+        "brightLog.logCorrectionNotificationEnabled": {
           "type": "boolean",
           "default": false,
           "description": "Whether to enable or disable the log correction notification."
         },
-        "smartLog.insertEnclosingFunction": {
+        "brightLog.insertEnclosingFunction": {
           "type": "boolean",
           "default": true,
           "description": "Whether to insert or not the enclosing function of the selected variable in the log message."
         },
-        "smartLog.insertEmptyLineBeforeLogMessage": {
+        "brightLog.insertEmptyLineBeforeLogMessage": {
           "type": "boolean",
           "default": false,
           "description": "Whether to insert an empty line before the log message or not."
         },
-        "smartLog.insertEmptyLineAfterLogMessage": {
+        "brightLog.insertEmptyLineAfterLogMessage": {
           "type": "boolean",
           "default": false,
           "description": "Whether to insert an empty line after the log message or not."
         },
-        "smartLog.delimiterInsideMessage": {
+        "brightLog.delimiterInsideMessage": {
           "type": "string",
           "default": "~",
           "description": "The delimiter that will separate the different log message elements (file name, line number, class, function and variable)"
         },
-        "smartLog.quote": {
+        "brightLog.quote": {
           "type": "string",
           "enum": [
             "\"",
@@ -96,7 +96,7 @@
           "default": "\"",
           "description": "Double quotes, single quotes or backtick"
         },
-        "smartLog.logType": {
+        "brightLog.logType": {
           "type": "string",
           "enum": [
             "log",
@@ -108,7 +108,7 @@
           "default": "log",
           "description": "Select the log type"
         },
-        "smartLog.logFunction": {
+        "brightLog.logFunction": {
           "type": "string",
           "default": "log",
           "description": "Specify a log function (when specified logType will be ignored)"
@@ -117,49 +117,49 @@
     },
     "commands": [
       {
-        "command": "smartLog.displayLogMessage",
-        "title": "Smart Log: Display Smart Log Message"
+        "command": "brightLog.displayLogMessage",
+        "title": "Bright Log: Display Bright Log Message"
       },
       {
-        "command": "smartLog.commentAllLogMessages",
-        "title": "Smart Log: Comment Smart Log Messages"
+        "command": "brightLog.commentAllLogMessages",
+        "title": "Bright Log: Comment Bright Log Messages"
       },
       {
-        "command": "smartLog.uncommentAllLogMessages",
-        "title": "Smart Log: Uncomment Smart Log Messages"
+        "command": "brightLog.uncommentAllLogMessages",
+        "title": "Bright Log: Uncomment Bright Log Messages"
       },
       {
-        "command": "smartLog.deleteAllLogMessages",
-        "title": "Smart Log: Delete Smart Log Messages"
+        "command": "brightLog.deleteAllLogMessages",
+        "title": "Bright Log: Delete Bright Log Messages"
       },
       {
-        "command": "smartLog.correctAllLogMessages",
-        "title": "Smart Log: Correct Smart Log Messages"
+        "command": "brightLog.correctAllLogMessages",
+        "title": "Bright Log: Correct Bright Log Messages"
       }
     ],
     "keybindings": [
       {
-        "command": "smartLog.displayLogMessage",
+        "command": "brightLog.displayLogMessage",
         "key": "ctrl+alt+l",
         "mac": "ctrl+alt+l"
       },
       {
-        "command": "smartLog.commentAllLogMessages",
+        "command": "brightLog.commentAllLogMessages",
         "key": "alt+shift+c",
         "mac": "alt+shift+c"
       },
       {
-        "command": "smartLog.uncommentAllLogMessages",
+        "command": "brightLog.uncommentAllLogMessages",
         "key": "alt+shift+u",
         "mac": "alt+shift+u"
       },
       {
-        "command": "smartLog.deleteAllLogMessages",
+        "command": "brightLog.deleteAllLogMessages",
         "key": "alt+shift+d",
         "mac": "alt+shift+d"
       },
       {
-        "command": "smartLog.correctAllLogMessages",
+        "command": "brightLog.correctAllLogMessages",
         "key": "alt+shift+x",
         "mac": "alt+shift+x"
       }
@@ -167,24 +167,24 @@
     "menus": {
       "view/item/context": [
         {
-          "command": "smartLog.commentAllLogMessages",
+          "command": "brightLog.commentAllLogMessages",
           "when": "viewItem == fileLogsNode",
-          "group": "smart"
+          "group": "bright"
         },
         {
-          "command": "smartLog.uncommentAllLogMessages",
+          "command": "brightLog.uncommentAllLogMessages",
           "when": "viewItem == fileLogsNode",
-          "group": "smart"
+          "group": "bright"
         },
         {
-          "command": "smartLog.deleteAllLogMessages",
+          "command": "brightLog.deleteAllLogMessages",
           "when": "viewItem == fileLogsNode",
-          "group": "smart"
+          "group": "bright"
         },
         {
-          "command": "smartLog.correctAllLogMessages",
+          "command": "brightLog.correctAllLogMessages",
           "when": "viewItem == fileLogsNode",
-          "group": "smart"
+          "group": "bright"
         }
       ]
     }
@@ -228,12 +228,12 @@
   },
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
-    "url": "https://github.com/alastairrmcneill/smart-log/issues",
+    "url": "https://github.com/alastairrmcneill/bright-log/issues",
     "email": "alastair.r.mcneill@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alastairrmcneill/smart-log"
+    "url": "https://github.com/alastairrmcneill/bright-log"
   },
   "dependencies": {
     "typescript": "^5.8.3",

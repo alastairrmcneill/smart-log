@@ -37,10 +37,10 @@ export function detectAll(
   const documentNbrOfLines: number = document.lineCount;
   const logMessages: Message[] = [];
   for (let i = 0; i < documentNbrOfLines; i++) {
-    const smartLogMessage = new RegExp(
+    const brightLogMessage = new RegExp(
       logFunctionToUseResult.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'),
     );
-    if (smartLogMessage.test(document.lineAt(i).text)) {
+    if (brightLogMessage.test(document.lineAt(i).text)) {
       const logMessage: Message = {
         spaces: '',
         lines: [],

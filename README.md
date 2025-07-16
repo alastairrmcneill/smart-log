@@ -1,12 +1,12 @@
-# Smart Log Log 📱
+# Bright Log 📱
 
 **Automating the process of writing meaningful log messages for JavaScript, TypeScript, Dart, and Swift.**
 
 ---
 
-## 🌟 Why Smart Log Log?
+## 🌟 Why Bright Log?
 
-Smart Log Log is a **developer's best friend** for debugging across multiple programming languages.
+Bright Log is a **developer's best friend** for debugging across multiple programming languages.
 
 **Enhanced with multi-language support**, it now works seamlessly with JavaScript, TypeScript, Dart, and Swift, making debugging **faster and more efficient** across your entire development stack.
 
@@ -146,17 +146,17 @@ The extension automatically detects your file type and uses the appropriate logg
 
 ### Available Settings
 
-| Setting                            | Description                       | Default |
-| ---------------------------------- | --------------------------------- | ------- |
-| `smartLog.logMessagePrefix`        | Prefix for log messages           | `📱`    |
-| `smartLog.logMessageSuffix`        | Suffix for log messages           | `:`     |
-| `smartLog.includeFilename`         | Include filename in logs          | `false` |
-| `smartLog.includeLineNum`          | Include line numbers              | `false` |
-| `smartLog.insertEnclosingClass`    | Include class name                | `true`  |
-| `smartLog.insertEnclosingFunction` | Include function name             | `true`  |
-| `smartLog.wrapLogMessage`          | Wrap logs with decorative borders | `false` |
-| `smartLog.addSemicolonInTheEnd`    | Add semicolon at end              | `false` |
-| `smartLog.quote`                   | Quote type (`"`, `'`, `` ` ``)    | `"`     |
+| Setting                             | Description                       | Default |
+| ----------------------------------- | --------------------------------- | ------- |
+| `brightLog.logMessagePrefix`        | Prefix for log messages           | `📱`    |
+| `brightLog.logMessageSuffix`        | Suffix for log messages           | `:`     |
+| `brightLog.includeFilename`         | Include filename in logs          | `false` |
+| `brightLog.includeLineNum`          | Include line numbers              | `false` |
+| `brightLog.insertEnclosingClass`    | Include class name                | `true`  |
+| `brightLog.insertEnclosingFunction` | Include function name             | `true`  |
+| `brightLog.wrapLogMessage`          | Wrap logs with decorative borders | `false` |
+| `brightLog.addSemicolonInTheEnd`    | Add semicolon at end              | `false` |
+| `brightLog.quote`                   | Quote type (`"`, `'`, `` ` ``)    | `"`     |
 
 ---
 
@@ -164,7 +164,7 @@ The extension automatically detects your file type and uses the appropriate logg
 
 1. Open VS Code
 2. Go to Extensions (`Ctrl+Shift+X`)
-3. Search for **"Smart Log Log"**
+3. Search for **"Bright Log"**
 4. Click **Install**
 5. Start debugging across JavaScript, TypeScript, Dart, and Swift! 🎉
 

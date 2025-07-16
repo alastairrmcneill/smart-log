@@ -32,7 +32,7 @@ export default (): void => {
       );
       if (activeTextEditor) {
         const originalLineCount = activeTextEditor.document.lineCount;
-        await vscode.commands.executeCommand('smartLog.deleteAllLogMessages', [
+        await vscode.commands.executeCommand('brightLog.deleteAllLogMessages', [
           {
             logType: 'table',
           },

@@ -30,7 +30,7 @@ export default (): void => {
         'commentCustomLogMessages.js',
       );
       if (activeTextEditor) {
-        await vscode.commands.executeCommand('smartLog.commentAllLogMessages', [
+        await vscode.commands.executeCommand('brightLog.commentAllLogMessages', [
           {
             logFunction: 'fancy.debug.func',
           },

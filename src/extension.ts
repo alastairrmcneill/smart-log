@@ -34,7 +34,7 @@ export async function activate(
   context: vscode.ExtensionContext,
 ): Promise<void> {
   const config: vscode.WorkspaceConfiguration =
-    vscode.workspace.getConfiguration('smartLog');
+    vscode.workspace.getConfiguration('brightLog');
   const extensionProperties: ExtensionProperties =
     getExtensionProperties(config);
   const commands: Array<Command> = getAllCommands();
