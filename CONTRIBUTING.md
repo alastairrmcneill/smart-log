@@ -83,7 +83,6 @@ This extension currently supports:
 │   ├── line-code-processing/     # Language-specific code processing
 │   ├── utilities/                # General utilities
 │   ├── jest-tests/              # Unit tests
-│   └── mocha-tests/             # Integration tests
 ├── examples/                     # Example files for testing
 ├── package.json                  # Extension manifest
 └── README.md
@@ -173,7 +172,6 @@ The project uses ESLint with Prettier integration. Make sure your code passes li
    ```
 
 2. **Make Your Changes**
-
    - Follow the code style guidelines
    - Add tests for new functionality
    - Update documentation if needed
@@ -233,17 +231,14 @@ To add support for a new programming language:
    ```
 
 3. **Update Language Detection**
-
    - Modify `src/utilities/languageDetection.ts`
    - Add the new language to supported languages
 
 4. **Update Package.json**
-
    - Add activation events for the new language
    - Update the description
 
 5. **Add Examples**
-
    - Create example files in `examples/`
    - Include in test files
 
