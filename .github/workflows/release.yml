@@ -1,0 +1,60 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    name: Release
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Check if version was bumped
+        id: version_check
+        run: |
+          OLD_VERSION=$(git show HEAD~1:package.json | jq -r .version)
+          NEW_VERSION=$(jq -r .version package.json)
+
+          echo "Old version: $OLD_VERSION"
+          echo "New version: $NEW_VERSION"
+
+          if [ "$OLD_VERSION" = "$NEW_VERSION" ]; then
+            echo "Version did not change. Skipping release."
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "Version changed. Proceeding to release."
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Exit if no version bump
+        if: steps.version_check.outputs.skip == 'true'
+        run: exit 0
+
+      - name: Install vsce
+        run: npm install -g vsce
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Publish extension
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+        run: vsce publish -p $VSCE_PAT
+
+      - name: Output Marketplace URL
+        run: |
+          EXTENSION_ID=$(jq -r .name package.json)
+          PUBLISHER=$(jq -r .publisher package.json)
+          MARKETPLACE_URL="https://marketplace.visualstudio.com/items?itemName=${PUBLISHER}.${EXTENSION_ID}"
+
+          echo "🔗 Extension published! View it on the Marketplace:"
+          echo "$MARKETPLACE_URL"
