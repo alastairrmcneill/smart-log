@@ -2,7 +2,7 @@
   "name": "bright-log",
   "displayName": "Bright Log",
   "description": "Automating the process of writing meaningful log messages for JavaScript, TypeScript, Dart, and Swift.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "AlastairMcNeill",
   "engines": {
     "vscode": "^1.50.0"
