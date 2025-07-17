@@ -7,7 +7,7 @@ describe('getExtensionProperties', () => {
     const props = getExtensionProperties(config);
 
     expect(props.wrapLogMessage).toBe(false);
-    expect(props.logMessagePrefix).toBe('📱');
+    expect(props.logMessagePrefix).toBe('🎯');
     expect(props.addSemicolonInTheEnd).toBe(false);
   });
 
@@ -18,7 +18,7 @@ describe('getExtensionProperties', () => {
       logMessageSuffix: '',
     });
     const props = getExtensionProperties(config);
-    expect(props.logMessagePrefix).toBe('📱');
+    expect(props.logMessagePrefix).toBe('🎯');
     expect(props.delimiterInsideMessage).toBe('~');
     expect(props.logMessageSuffix).toBe(':');
   });

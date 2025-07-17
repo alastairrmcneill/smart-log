@@ -22,7 +22,7 @@ describe('emptyBlockDebuggingMsg', () => {
       textEditorEdit,
       line,
       1,
-      `console.log('📱 ~ x:', x);`,
+      `console.log('🎯 ~ x:', x);`,
       '',
       2,
     );
@@ -30,7 +30,7 @@ describe('emptyBlockDebuggingMsg', () => {
     expect(textEditorEdit.delete).toHaveBeenCalledTimes(1);
     expect(textEditorEdit.insert).toHaveBeenCalledWith(
       new Position(1, 0),
-      "function greet(x) {\n  console.log('📱 ~ x:', x);\n}\n",
+      "function greet(x) {\n  console.log('🎯 ~ x:', x);\n}\n",
     );
   });
   it('transforms an arrow function with empty block', () => {
@@ -43,7 +43,7 @@ describe('emptyBlockDebuggingMsg', () => {
       editor,
       line,
       1,
-      `console.log('📱 ~ x:', x);`,
+      `console.log('🎯 ~ x:', x);`,
       '',
       2,
     );
@@ -51,7 +51,7 @@ describe('emptyBlockDebuggingMsg', () => {
     expect(editor.delete).toHaveBeenCalledTimes(1);
     expect(editor.insert).toHaveBeenCalledWith(
       new Position(1, 0),
-      "const transform = (x) => {\n  console.log('📱 ~ x:', x);\n}\n",
+      "const transform = (x) => {\n  console.log('🎯 ~ x:', x);\n}\n",
     );
   });
 });
