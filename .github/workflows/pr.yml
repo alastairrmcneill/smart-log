@@ -72,4 +72,6 @@ jobs:
         run: sudo apt-get install -y xvfb
 
       - name: Run Tests with XVFB
-        run: xvfb-run -a npm test:jest
+        run: xvfb-run -a npm test
+        env:
+          VSCODE_TEST_PLATFORM: linux-x64
