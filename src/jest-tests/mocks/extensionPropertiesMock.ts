@@ -3,7 +3,7 @@ import { LogType } from '../../entities/extension/extensionProperties';
 
 export const extensionPropertiesMock: ExtensionProperties = {
   wrapLogMessage: false,
-  logMessagePrefix: '📱',
+  logMessagePrefix: '🎯',
   logMessageSuffix: ':',
   addSemicolonInTheEnd: false,
   insertEnclosingClass: true,

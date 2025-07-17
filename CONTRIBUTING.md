@@ -1,4 +1,4 @@
-# Contributing to Bright Log 📱
+# Contributing to Bright Log 🎯
 
 Thank you for your interest in contributing to Bright Log! This guide will help you get started with development and contributing to this multi-language VS Code extension.
 
@@ -14,7 +14,7 @@ Thank you for your interest in contributing to Bright Log! This guide will help 
 - [Adding Language Support](#adding-language-support)
 - [Issue Reporting](#issue-reporting)
 
-## 📱 Getting Started
+## 🎯 Getting Started
 
 ### Prerequisites
 
@@ -307,4 +307,4 @@ By contributing to Bright Log, you agree that your contributions will be license
 
 ---
 
-Thank you for contributing to Bright Log! Your help makes this extension better for developers worldwide. 📱
+Thank you for contributing to Bright Log! Your help makes this extension better for developers worldwide. 🎯

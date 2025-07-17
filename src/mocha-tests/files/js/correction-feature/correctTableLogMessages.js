@@ -5,7 +5,7 @@ const users = [
 ];
 
 // Outdated table log message: incorrect filename and line number
-console.table('📱 ~ correctTableLogMessages.js:6 ~ users:', users);
+console.table('🎯 ~ correctTableLogMessages.js:6 ~ users:', users);
 
 const products = [
   { id: 101, name: 'Laptop', price: 999 },
@@ -13,13 +13,13 @@ const products = [
 ];
 
 // Outdated table log message: incorrect filename and line number
-console.table('📱 ~ correctTableLogMessages.js:13 ~ products:', products);
+console.table('🎯 ~ correctTableLogMessages.js:13 ~ products:', products);
 
 function filterUsers(minAge) {
   const filteredUsers = users.filter((user) => user.age >= minAge);
   // Outdated table log message: incorrect filename and line number
   console.table(
-    '📱 ~ correctTableLogMessages.js:18 ~ filterUsers ~ filteredUsers:',
+    '🎯 ~ correctTableLogMessages.js:18 ~ filterUsers ~ filteredUsers:',
     filteredUsers,
   );
   return filteredUsers;

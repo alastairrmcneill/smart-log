@@ -144,7 +144,7 @@ export function getHtmlWebView(): string {
     <body>
         <div class="container">
             <div class="header">
-                <h1>📱 Bright Log</h1>
+                <h1>🎯 Bright Log</h1>
                 <div class="subtitle">Multi-Language Console Logging for Modern Development</div>
             </div>
             
@@ -189,52 +189,52 @@ export function getHtmlWebView(): string {
                     <h2><span class="emoji">🎯</span>Language-Specific Examples</h2>
                     <div class="language-examples">
                         <div class="language-card">
-                            <h3>📱 Dart (Flutter)</h3>
+                            <h3>🎯 Dart (Flutter)</h3>
                             <pre><code>var username = 'john_doe';
 // Select 'username' + Ctrl+Alt+L
-print("📱 ~ username: $username");
+print("🎯 ~ username: $username");
 
 // In functions with context
 void createUser(String name) {
     var userId = generateId();
-    print("📱 ~ createUser ~ userId: $userId");
+    print("🎯 ~ createUser ~ userId: $userId");
 }</code></pre>
                         </div>
                         <div class="language-card">
                             <h3>🍎 Swift (iOS)</h3>
                             <pre><code>let username = "john_doe"
 // Select 'username' + Ctrl+Alt+L
-print("📱 ~ username: \\(username)")
+print("🎯 ~ username: \\(username)")
 
 // In functions with context
 func createUser(name: String) {
     let userId = generateId()
-    print("📱 ~ createUser ~ userId: \\(userId)")
+    print("🎯 ~ createUser ~ userId: \\(userId)")
 }</code></pre>
                         </div>
                         <div class="language-card">
                             <h3>🌐 JavaScript</h3>
                             <pre><code>const username = 'john_doe';
 // Select 'username' + Ctrl+Alt+L
-console.log("📱 ~ username:", username);
+console.log("🎯 ~ username:", username);
 
 // In functions with context
 function createUser(name) {
     const userId = generateId();
-    console.log("📱 ~ createUser ~ userId:", userId);
+    console.log("🎯 ~ createUser ~ userId:", userId);
 }</code></pre>
                         </div>
                         <div class="language-card">
                             <h3>📘 TypeScript</h3>
                             <pre><code>const username: string = 'john_doe';
 // Select 'username' + Ctrl+Alt+L
-console.log("📱 ~ username:", username);
+console.log("🎯 ~ username:", username);
 
 // In classes with context
 class UserService {
     createUser(name: string): void {
         const userId = this.generateId();
-        console.log("📱 ~ UserService ~ createUser ~ userId:", userId);
+        console.log("🎯 ~ UserService ~ createUser ~ userId:", userId);
     }
 }</code></pre>
                         </div>
@@ -280,13 +280,13 @@ class UserService {
                 <div class="section">
                     <h2><span class="emoji">🛠️</span>Development Workflow Examples</h2>
                     
-                    <h3>📱 Flutter App Development</h3>
+                    <h3>🎯 Flutter App Development</h3>
                     <div class="code">
 class MyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
-    print("📱 ~ MyWidget ~ build ~ theme: $theme");
+    print("🎯 ~ MyWidget ~ build ~ theme: $theme");
     
     return Scaffold(
       body: Center(
@@ -303,7 +303,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let userDefaults = UserDefaults.standard
-        print("📱 ~ ViewController ~ viewDidLoad ~ userDefaults: \\(userDefaults)")
+        print("🎯 ~ ViewController ~ viewDidLoad ~ userDefaults: \\(userDefaults)")
     }
 }
                     </div>
@@ -312,7 +312,7 @@ class ViewController: UIViewController {
                     <div class="code">
 function UserComponent({ userId }: { userId: string }) {
   const user = fetchUser(userId);
-  console.log("📱 ~ UserComponent ~ user:", user);
+  console.log("🎯 ~ UserComponent ~ user:", user);
   
   return &lt;div&gt;{user.name}&lt;/div&gt;;
 }
@@ -330,7 +330,7 @@ function UserComponent({ userId }: { userId: string }) {
                         </tr>
                         <tr>
                             <td><code>brightLog.logMessagePrefix</code></td>
-                            <td>"📱"</td>
+                            <td>"🎯"</td>
                             <td>Prefix for all log messages</td>
                         </tr>
                         <tr>
@@ -362,7 +362,7 @@ function UserComponent({ userId }: { userId: string }) {
                 </div>
 
                 <div class="section">
-                    <h2><span class="emoji">📱</span>Getting Started</h2>
+                    <h2><span class="emoji">🎯</span>Getting Started</h2>
                     <ol>
                         <li><strong>Select a variable</strong> in any supported file (.js, .ts, .dart, .swift)</li>
                         <li><strong>Press <span class="keybinding">Ctrl+Alt+L</span></strong></li>

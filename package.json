@@ -33,7 +33,7 @@
         },
         "brightLog.logMessagePrefix": {
           "type": "string",
-          "default": "📱",
+          "default": "🎯",
           "description": "The prefix of the log message."
         },
         "brightLog.logMessageSuffix": {

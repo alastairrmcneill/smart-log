@@ -39,7 +39,7 @@ mocha-tests/
   - `expectActiveTextEditorWithFile`
   - `documentLinesChanged`
 
-## 📱 Running Tests
+## 🎯 Running Tests
 
 ### ▶️ Via CLI (headless)
 

@@ -7,13 +7,13 @@ const person = {
   },
 };
 
-console.debug('📱 ~ person:', person);
+console.debug('🎯 ~ person:', person);
 
 const isMarried = true;
 
-console.debug('📱 ~ isMarried:', isMarried);
+console.debug('🎯 ~ isMarried:', isMarried);
 
 function sayHello(person) {
-  console.debug('📱 ~ sayHello ~ person:', person);
+  console.debug('🎯 ~ sayHello ~ person:', person);
   console.debug(`Hello ${person.fullName}`);
 }

@@ -39,7 +39,7 @@ jest-tests/
 - Use `jest.mock()` to isolate dependencies as needed.
 - You **do not need to import** `describe`, `test`, or `expect` if your `tsconfig` includes `@types/jest`.
 
-## 📱 Running Tests
+## 🎯 Running Tests
 
 ```bash
 npm run test:jest

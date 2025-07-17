@@ -21,7 +21,7 @@ export function showReleaseHtmlWebViewAndNotification(
   // Fresh install of the extension
   if (!wasPreviousReleaseWebviewShown && !wasLatestReleaseWebviewShown) {
     openWebView(
-      `📱 Welcome To Bright Log Family 🎊`,
+      `🎯 Welcome To Bright Log Family 🎊`,
       freshInstallHtmlWebView(),
     );
     writeToGlobalState(
@@ -34,7 +34,7 @@ export function showReleaseHtmlWebViewAndNotification(
   // Existing users updating the extension
   if (!wasLatestReleaseWebviewShown) {
     openWebView(
-      `📱 Bright Log - Release ${latestWebViewReleaseVersion} Notes`,
+      `🎯 Bright Log - Release ${latestWebViewReleaseVersion} Notes`,
       releaseNotes[latestWebViewReleaseVersion].webViewHtml,
     );
     writeToGlobalState(
